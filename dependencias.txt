@@ -1,0 +1,1 @@
+npm install --save-dev gulp gulp-jade gulp-plumber gulp-uglify gulp-concat gulp-autoprefixer browser-sync

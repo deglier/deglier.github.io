@@ -1,0 +1,43 @@
+{
+  "name": "degliersa",
+  "version": "1.0.0",
+  "description": "um blog para da luz as pessoas sobre front end",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-uglify": "^1.5.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deglier/deglier.github.io.git"
+  },
+  "keywords": [
+    "fontend",
+    "blog",
+    "css",
+    "sass",
+    "js",
+    "javascript",
+    "jekyll",
+    "jquery",
+    "mobile"
+  ],
+  "author": "Deglier da Silva de Amorim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deglier/deglier.github.io/issues"
+  },
+  "homepage": "https://github.com/deglier/deglier.github.io#readme"
+}
