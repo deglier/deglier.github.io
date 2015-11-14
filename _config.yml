@@ -23,8 +23,6 @@ links:
     url: /
   - title: Tags
     url: /tags
-  - title: Sobre mim
-    url: /about
     
 
 exclude: ['package.json', 'src', 'node_modules', 'dependencias.txt', 'gulpfile.js']
