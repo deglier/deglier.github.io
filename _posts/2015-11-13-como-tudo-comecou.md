@@ -20,4 +20,4 @@ Então, eu irei explicar <s>um pouco</s> como eu comecei a gostar de web e progr
 
 Pois é, eu trabalhava em uma lan-house que do nada eu, sem querer mesmo, pressione uma tecla no teclado que fez abrir o código fonte do <s>falecido</s> **Orkut**. Fiquei <s>mavilindo</s> maravilhado e ao mesmo tempo não entendi bem o que eu estava vendo. Só que na hora aquilo me deu uma <s>puta</s> curiosidade e fui no <s>pai dos burros</s> **Google** procurar algo que poderia fazer com que eu entendesse tudo aquilo que pra mim não era comum. 
 
-Então, nessa minha pesquisa, eu acabei encontrando um site de cursos *onlines*,com cursos *gratuitos*... Enfim, acabei por fazer <s>um</> dois cursos: HTML{: Hyper Text Markup Language} e CSS{: Cascade Style Sheet}.
+Então, nessa minha pesquisa, eu acabei encontrando um site de cursos *onlines*,com cursos *gratuitos*... Enfim, acabei por fazer <s>um</s> dois cursos: HTML{: Hyper Text Markup Language} e CSS{: Cascade Style Sheet}.
