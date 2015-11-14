@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Como tudo começou"
-description: 'Quando o boom da web explodui dentro de mim.'
-introduction: 'Quando o boom da web explodui dentro de mim e como surgiu o meu interesse por programação.'
+twitter_text: 'Quando o boom da web expldiu dentro de mim'
+description: 'Quando o boom da web expldiu dentro de mim.'
+introduction: 'Quando o boom da web expldiu dentro de mim e como surgiu o meu interesse por programação.'
 image: '/assets/img/como-tudo-comecou/main.png'
 categoria:
 tags:
@@ -11,12 +12,10 @@ tags:
 permalink: /como-tudo-comecou/
 ---
 
-###OLá!
+### olá
 
-Então, aqui eu vou explicar um pouco de como que eu comecei a gostar de web e de programação 
+Então, eu irei explicar ~~um pouco~~ como eu comecei a gostar de web e programação.
 
+####Era uma vez, uma lan-house :)
 
-####Era uma vez, uma lanhouse :)
-
-Pois é, eu trabalhava em uma lanhouse quando do nada eu, sem querer mesmo, apertei uma tecla do teclado que fez aparecer o código fonte do <s>falecido</s> **orkut**.
-Fiquei maravilhado e ao mesmo tempo não entendia bem o que eu estava vendo. Mesmo assim eu contineu e fui procurando sobre oque era aquilo.
+Pois é, eu trabalhava em uma lan-house que do nada eu, sem querer mesmo, pressione uma tecla no teclado que fez abrir o código fonte do ~~falecido~~ **Orkut**. Fiquei ~~mavilindo~~ maravilhado e ao mesmo tempo não entendi bem o que eu estava vendo. Só que na hora aquilo me deu uma ~~puta~~ curiosidade e fui no ~~pai dos burros~~ Google procurar ao mesmo entendo o que era tudo aquilo que eu estava vendo.
