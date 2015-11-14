@@ -502,13 +502,6 @@ a.header-menu--icon{
                 .icon-gplus {
                     color: #d34836;
                 }
-                .icon-facebook,
-                .icon-twitter,
-                .icon-whatsapp,
-                .icon-gplus {
-                    opacity: 1;
-                    @extend %transition-ease-in-out-300ms;
-                }
             }
         }
         
@@ -516,9 +509,7 @@ a.header-menu--icon{
         .icon-twitter,
         .icon-whatsapp,
         .icon-gplus {
-            opacity: 0.5;
             margin: 10px 5px;
-            @extend %transition-ease-in-out-300ms;
         }
     }
 }
