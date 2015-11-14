@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Como tudo começou"
+twitter_text: 'Quando o boom da web expldiu dentro de mim'
 description: 'Quando o boom da web expldiu dentro de mim.'
 introduction: 'Quando o boom da web expldiu dentro de mim e como surgiu o meu interesse por programação.'
 image: '/assets/img/como-tudo-comecou/main.png'
