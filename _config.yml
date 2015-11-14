@@ -17,7 +17,9 @@ twitter_username: degliersa
 github_username:  deglier
 
 # Build settings
-markdown: kramdown
+markdown: 
+  kramdown:
+    input: GFM
 links:
   - title: Home
     url: /
