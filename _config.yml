@@ -17,16 +17,10 @@ twitter_username: degliersa
 github_username:  deglier
 
 # Build settings
-<<<<<<< HEAD
-markdown: 
-  kramdown:
-    input: GFM
-=======
 markdown: kramdown
 kramdown:
   input: GFM
-  
->>>>>>> origin/master
+
 links:
   - title: Home
     url: /
