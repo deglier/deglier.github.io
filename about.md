@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: post
 title: About
+categoria: js
 permalink: /about/
 ---
 

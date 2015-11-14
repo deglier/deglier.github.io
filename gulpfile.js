@@ -1,5 +1,5 @@
 var gulp            =   require('gulp');
-var browserSync     =   require('browser-sync');
+var browserSync     =   require('browser-sync').create();
 var autoprefixer    =   require('gulp-autoprefixer');
 var concat          =   require('gulp-concat');
 var jade            =   require('gulp-jade');
@@ -12,34 +12,14 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Rodando:</span> $ jekyll build'
 };
 
-/*
-* Monta o site do jekyll
-*/
-
-gulp.task('jekyll-build', function(done){
-    browserSync.notify(messages.jekyllBuild);
-    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
-});
-
-/**
-* Refaz o site e atualiza a página
-*/
-
-gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
-    browserSync.reload();
-});
-
-/**
-* Espera até que o jekyll seja executado e então levanta o sevidor utilizando o _site como past raiz
-*/
-
-gulp.task('broser-sync', ['jekyll-build'], function(){
-    browserSync({
+gulp.task('serve', function(){
+    browserSync.init({
         server: {
             baseDir: '_site'
         }
     });
+    
+    gulp.watch('_site/*').on('change', browserSync.reload);
 });
 
 /**
@@ -54,16 +34,14 @@ gulp.task('js', function(){
     .pipe(gulp.dest('assets/js'));
 });
 
-
 /**
 * otimiza imagens
 */
-
-gulp.task('imagemin', function(){
-    return gulp.src('src/img/**/*')
-    .pipe(plumber())
-    .pipe(imagemin({ optmizationLevel: 3, progessive: true, interlaced: true }))
-    .pipe(gulp.dest('assets/img/'));
+gulp.task('imagemin', function() {
+	return gulp.src('src/img/**/*.{jpg,png,gif}')
+		.pipe(plumber())
+		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		.pipe(gulp.dest('assets/img/'));
 });
 
 /**
@@ -73,7 +51,6 @@ gulp.task('imagemin', function(){
 gulp.task('watch', function(){
     gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts*'], ['jekyll-build']);
 });
 
-gulp.task('default', ['js', 'imagemin', 'watch'])
+gulp.task('default', ['js', 'imagemin', 'watch', 'serve'])

@@ -1,0 +1,17 @@
+<time itemprop="datePublished" datetime="{{ post.date }}">{% assign m = post.date | date: "%-m" %}
+{{ post.date | date: "%-d" }}
+{% case m %}
+  {% when '1' %}jan
+  {% when '2' %}fev
+  {% when '3' %}mar
+  {% when '4' %}abr
+  {% when '5' %}mai
+  {% when '6' %}jun
+  {% when '7' %}jul
+  {% when '8' %}ago
+  {% when '9' %}set
+  {% when '10' %}out
+  {% when '11' %}nov
+  {% when '12' %}dez
+{% endcase %}
+{{ post.date | date: "%Y" }}</time>

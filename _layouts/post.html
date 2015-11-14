@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% include menu.html %}
+{% include header.html %}
+<section class="container-post">
+   <header class="header-post">
+       <h2 class="title">{{ page.title }}</h2>
+       <p class="lead">{{ page.introduction }}</p>
+       {% include time-post.html %}
+   </header>
+    <article class="post">
+        {{ content }}
+</article>
+<footer class="footer-post">
+    {% include share.html %}
+    {% include comments.html %}
+</footer>
+{% include footer.html %}
