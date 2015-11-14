@@ -18,6 +18,9 @@ github_username:  deglier
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  
 links:
   - title: Home
     url: /
