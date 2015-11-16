@@ -15,9 +15,9 @@ A intenção principal do blog seria/será falar e desmistificar tudo que for po
 
 ### Pautas que serão bem abordadas  por aqui:
 
--  **CSS** - puro e pré processadores como sass e less (alvez stylus rs..);
--  **HTML** - puro, markdown, jade ... por enquanto são só esses mesmos rs...;
--  **JavaScript** - puro, jquery e futuramente: angularJS, reactJS...;
+- <b>CSS</b> - puro e pré processadores como sass e less (alvez stylus rs..);
+-  <b>HTML</b> - puro, markdown, jade ... por enquanto são só esses mesmos rs...;
+-  <b>JavaScript</b> - puro, jquery e futuramente: angularJS, reactJS...;
 
 #### CSS
 Com foco sempre que o possível em pré processadores, mas sempre dando exemplos do mesmo códigos na forma natural do CSS. As CSS 3 tem uma infinidade de propriedades e regras. que renderão ótimos artigos. 
