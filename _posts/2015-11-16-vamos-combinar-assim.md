@@ -15,11 +15,11 @@ A intenção principal do blog seria/será falar e desmistificar tudo que for po
 
 Há muita coisa pra ser abordada e estou planejando algo para facilitar à quem ler e a mim também.
 
-###Pautas que serão bem abordadas  por aqui:
+### Pautas que serão bem abordadas  por aqui:
 
-* **CSS** - puro e pré processadores como sass e less (alvez stylus rs..);
-* **HTML** - puro, markdown, jade ... por enquanto são só esses mesmos rs...;
-* **JavaScript** - puro, jquery e futuramente: angularJS, reactJS...;
+-  **CSS** - puro e pré processadores como sass e less (alvez stylus rs..);
+-  **HTML** - puro, markdown, jade ... por enquanto são só esses mesmos rs...;
+-  **JavaScript** - puro, jquery e futuramente: angularJS, reactJS...;
 
 #### CSS
 Com foco sempre que o possível em pré processadores, mas sempre dando exemplos do mesmo códigos na forma natural do CSS.
@@ -36,8 +36,6 @@ uma dela é usando **jade** um gerado de template que mostra como o HTML pode se
 E por fim, mas não menos importante, o javascript. Se o javascript fosse um sentimento, certamente ele seria a alegria. E todos os seus sentimentos.
 tendo como alguma bibliotecas (que facilitam da programação) o **jQuery**. 
 Sim. Certamente você diria que existem outras bibliotecas.
-
-###############################################
 
 ### A união faz a força
 
