@@ -11,9 +11,7 @@ tags:
   - novidades
 permalink: /vamos-combinar-assim/
 ---
-A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que terá espaço aqui também, mas nunca esquecendo que o foco aqui é frontend
-
-Há muita coisa pra ser abordada e estou planejando algo para facilitar à quem ler e a mim também.
+A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que terá espaço aqui também, mas nunca esquecendo que o foco aqui é frontend Há muita coisa pra ser abordada que facilita o desenvolvimento. Estou planejando algo para facilitar à quem ler e a mim também.
 
 ### Pautas que serão bem abordadas  por aqui:
 
@@ -22,20 +20,15 @@ Há muita coisa pra ser abordada e estou planejando algo para facilitar à quem 
 -  **JavaScript** - puro, jquery e futuramente: angularJS, reactJS...;
 
 #### CSS
-Com foco sempre que o possível em pré processadores, mas sempre dando exemplos do mesmo códigos na forma natural do CSS.
-
-Tem muita coisa pra se ver, abordar, ensinar e aprender. As CSS 3 tem uma uma infinidade de propriedades e regras. que renderão ótimos artigos. 
+Com foco sempre que o possível em pré processadores, mas sempre dando exemplos do mesmo códigos na forma natural do CSS. As CSS 3 tem uma infinidade de propriedades e regras. que renderão ótimos artigos. 
 
 #### HTML
 
-Assim como o CSS exitem alguma maneiras de ser escreve melhor e mais rápido o CSS.
-uma dela é usando **jade** um gerado de template que mostra como o HTML pode ser mai fácil ainda de se aprender.
+Assim como o CSS# exitem alguma maneiras de ser escrever melhor e mais rápido o HTML. Uma delas é usando **jade** um gerador de *template* que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.
 
 #### JavaScript
 
-E por fim, mas não menos importante, o javascript. Se o javascript fosse um sentimento, certamente ele seria a alegria. E todos os seus sentimentos.
-tendo como alguma bibliotecas (que facilitam da programação) o **jQuery**. 
-Sim. Certamente você diria que existem outras bibliotecas.
+E por fim, mas não menos importante, o javascript. Se o javascript fosse um sentimento, certamente ele seria a alegria. E todos os seus sentimentos, tendo como algumas bibliotecas (que facilitam da programação) o **jQuery**. Sim. Certamente você diria que existem outras bibliotecas.
 
 ### A união faz a força
 
