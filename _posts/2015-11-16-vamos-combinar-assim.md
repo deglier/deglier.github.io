@@ -24,7 +24,7 @@ Com foco sempre que o possível em pré processadores, mas sempre dando exemplos
 
 ### HTML
 
-Assim como o CSS# exitem alguma maneiras de ser escrever melhor e mais rápido o HTML. Uma delas é usando **jade** um gerador de *template* que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.
+Assim como o CSS exitem alguma maneiras de ser escrever melhor e mais rápido o HTML. Uma delas é usando **jade** um gerador de *template* que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.
 
 ### JavaScript
 
