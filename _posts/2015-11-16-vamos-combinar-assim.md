@@ -11,7 +11,7 @@ tags:
   - novidades
 permalink: /vamos-combinar-assim/
 ---
-A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que terá espaço aqui também, mas nunca esquecendo que o foco aqui é frontend Há muita coisa pra ser abordada que facilita o desenvolvimento. Estou planejando algo para facilitar à quem ler e a mim também.
+A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que ter]ao espaço aqui também, mas nunca esquecendo que o foco aqui é frontend. Há muita coisa pra ser abordada que facilita o desenvolvimento. Estou planejando algo para facilitar à quem ler e a mim também.
 
 #### Pautas que serão bem abordadas  por aqui:
 
@@ -20,11 +20,11 @@ A intenção principal do blog seria/será falar e desmistificar tudo que for po
 -  <b>JavaScript</b> - puro, jquery e futuramente: angularJS, reactJS.
 
 ### CSS
-Com foco sempre que o possível em pré processadores, mas sempre dando exemplos do mesmo códigos na forma natural do CSS. As CSS 3 tem uma infinidade de propriedades e regras. que renderão ótimos artigos. 
+Com foco sempre que possível em pré processadores, mas sempre dando exemplos dos mesmos códigos na forma natural do CSS. As CSS 3 tem uma infinidade de propriedades e regras que renderão ótimos artigos. 
 
 ### HTML
 
-Assim como o CSS exitem alguma maneiras de ser escrever melhor e mais rápido o HTML. Uma delas é usando **jade** um gerador de *template* que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.
+Assim como o CSS exitem algumas maneiras de se escrever melhor e mais rápido o HTML. Uma delas é usando **Jade** um gerador de *template* que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.
 
 ### JavaScript
 
