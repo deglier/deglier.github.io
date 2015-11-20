@@ -41,11 +41,15 @@ Após a instalação do node.js, instalaremos o Gulp. Vamos usar o terminal (no 
 
 A instalação no windows via prompt fica assim:
 
-<pre><code class=terminal>npm install gulp -g</code></pre>
+````
+npm install gulp -g
+````
 
 E no terminal é a mesma coisa, com a diferença apenas do `sudo`, que invoca o [**super user**](https://pt.m.wikipedia.org/wiki/Sudo "Página da wikipédia sobre SUDO (SuperUser)" ) do sistema:
 
-<pre><code class=terminal>sudo npm install gulp -g</code></pre>
+````
+sudo npm install gulp -g
+````
 
 
 ## Explicando os comandos
