@@ -34,6 +34,7 @@ O Gulp é conhecido como um *task runner*. uma tecnologia baseada em JavaScript 
 ## Node.js
 
 ![Node.js](https://nodejs.org/static/images/logos/nodejs.png "Logo do Node.js" )
+
 Definição que encontramos na Wikipédia sobre Node.js:
 
 >"Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha." - *Referência do site [Wikipédia](https://pt.m.wikipedia.org/wiki/Node.js "Página da wikipédia que fala sobre o Node.js" ) visualizada em 20 de Novembro de 2015*
