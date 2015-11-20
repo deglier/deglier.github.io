@@ -40,15 +40,13 @@ O download do Node.js pode ser feito por meio desse [link](https://nodejs.org/en
 Após a instalação do node.js, instalaremos o Gulp. Vamos usar o terminal (no linux e mac) ou prompt de comandos (no windows). A instalação é feita praticamente da mesma maneira em ambos. Vamos usar a flag `-g` para instalar globalmente o Gulp.
 
 A instalação no windows via prompt fica assim:
-````bash
-npm install gulp -g
 
-````
+<pre><code class=terminal>npm install gulp -g</code></pre>
 
 E no terminal é a mesma coisa, com a diferença apenas do `sudo`, que invoca o [**super user**](https://pt.m.wikipedia.org/wiki/Sudo "Página da wikipédia sobre SUDO (SuperUser)" ) do sistema:
-````bash
-sudo npm install gulp -g
-````
+
+<pre><code class=terminal>sudo npm install gulp -g</code></pre>
+
 
 ## Explicando os comandos
 
