@@ -5,9 +5,8 @@ twitter_text: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
 description: 'Falaremos sobre Gulp, Node.js e NPM.'
 introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
 imagem: /assets/img/vamos-combinar/main.jpg
-erie:
-  - 'Tecnologias do blog'
-     link: tecnologias-do-blog
+serie: 'Tecnologias do blog'
+serie-link: tecnologias-do-blog
 tags:
   - planos
   - conteudoDoSite
