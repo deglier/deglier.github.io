@@ -1,0 +1,36 @@
+---
+layout: tags
+title: "#Tags"
+permalink: /tags/
+description: "Procure os assuntos pelas tags."
+---
+
+<div class="tags">
+{% assign tags_list = site.tags %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %}
+        <a data-scroll href="#{{ tag }}">#{{ tag }}</a>
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+        <a data-scroll href="#{{ tag[0] }}">#{{ tag[0] }}</a>
+    {% endfor %}
+  {% endif %}
+{% assign tags_list = nil %}
+</div>
+<hr />
+{% for tag in site.tags  %}
+    <h3 class="tag-title" id="{{ tag[0] }}">#{{ tag[0] }}</h3>
+    <nav class="indice">
+        {% assign pages_list = tag[1] %}
+        {% for post in pages_list reversed %}
+            {% if post.title != null %}
+            {% if group == null or group == post.group %}
+        <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+            {% endif %}
+            {% endif %}
+        {% endfor %}
+        {% assign pages_list = nil %}
+        {% assign group = nil %}
+    </nav>
+{% endfor %}
