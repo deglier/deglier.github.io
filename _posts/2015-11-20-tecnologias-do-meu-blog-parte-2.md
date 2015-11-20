@@ -1,26 +1,20 @@
 ---
-
 layout: post
 title: 'Tecnologias presentes nesse blog #2'
-twitter_text: 'Todas as tecnologias e linguagens presentes nesse blog'
-description: 'Todas as tecnologias e linguagens presentes nesse blog'
-introduction: 'Shiiu não conta pra niguém, vou revelar os segredinhos que tem nesse blog :p'
-imagem: /assets/img/tecnologias-do-blog/main.jpg
-serie:
+twitter_text: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
+description: 'Falaremos sobre Gulp, Node.js e NPM.'
+introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
+imagem: /assets/img/vamos-combinar/main.jpg
+erie:
   - 'Tecnologias do blog'
      link: tecnologias-do-blog
 tags:
-  - tecnologias
-  - blog
-  - linguagens
-  - css
-  - html
-  - jekyll
-  - gulp
-  - sass
-permalink: /tecnologias-presentes-nesse-blog/
-
+  - planos
+  - conteudoDoSite
+  - novidades
+permalink: /tecnologias-do-meu-blog-parte-2/
 ---
+
 
 ## Ahá!
 Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: **Gulp**!
