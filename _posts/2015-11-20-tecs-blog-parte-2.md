@@ -1,6 +1,7 @@
 ---
+
 layout: post
-title: 'Tecnologias presentes nesse blog - #2 - Instalação do Gulp'
+title: 'Tecnologias presentes nesse blog #2'
 twitter_text: 'Todas as tecnologias e linguagens presentes nesse blog'
 description: 'Todas as tecnologias e linguagens presentes nesse blog'
 introduction: 'Shiiu não conta pra niguém, vou revelar os segredinhos que tem nesse blog :p'
@@ -18,12 +19,13 @@ tags:
   - gulp
   - sass
 permalink: /tecnologias-presentes-nesse-blog/
+
 ---
 
 ## Ahá!
 Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: **Gulp**!
 
-###Gulp
+### Gulp
 ![Gulp logo](http://jakesharp.co/wp-content/uploads/2015/03/gulp-logotype-300x187.png "Gulp logo")
 
 Imagine se tivesse uma maneira de fazer tudo o que você faz ao chegar no trabalho até efetivamente trabalhar de verdade? É disso que se trata o Gulp.
