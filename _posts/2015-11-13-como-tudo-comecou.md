@@ -28,3 +28,4 @@ Espero que através desse meio que teremos, possamos aprender mais e você apren
 Minha concepção de conhecimento só tem sentindo quando eu posso passar o mesmo que sei para outras pessoas. 
 
 Aos poucos vou falando mais de mim e ajudando a plataforma também. Até mais gurigotos. :p
+

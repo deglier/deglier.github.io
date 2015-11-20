@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deglier amorim - Desenvolvedor Web</title>
+    <description>Um blog para simplicar a vida do programador Web :)
+</description>
+    <link>http://deglier.github.io/</link>
+    <atom:link href="http://deglier.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 14 Nov 2015 08:09:55 -0200</pubDate>
+    <lastBuildDate>Sat, 14 Nov 2015 08:09:55 -0200</lastBuildDate>
+    <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>Como tudo começou</title>
+        <description>&lt;h3 id=&quot;ol&quot;&gt;olá&lt;/h3&gt;
+
+&lt;p&gt;Então, eu irei explicar &lt;s&gt;um pouco&lt;/s&gt; como eu comecei a gostar de web e programação.&lt;/p&gt;
+
+&lt;h4 id=&quot;era-uma-vez-uma-lan-house-&quot;&gt;Era uma vez, uma lan-house :)&lt;/h4&gt;
+
+&lt;p&gt;Pois é, eu trabalhava em uma lan-house que do nada eu, sem querer mesmo, pressione uma tecla no teclado que fez abrir o código fonte do &lt;s&gt;falecido&lt;/s&gt; &lt;strong&gt;Orkut&lt;/strong&gt;. Fiquei &lt;s&gt;mavilindo&lt;/s&gt; maravilhado e ao mesmo tempo não entendi bem o que eu estava vendo. Só que na hora aquilo me deu uma &lt;s&gt;puta&lt;/s&gt; curiosidade e fui no &lt;s&gt;pai dos burros&lt;/s&gt; Google procurar ao mesmo entendo o que era tudo aquilo que eu estava vendo.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Nov 2015 00:00:00 -0200</pubDate>
+        <link>http://deglier.github.io/como-tudo-comecou/</link>
+        <guid isPermaLink="true">http://deglier.github.io/como-tudo-comecou/</guid>
+        
+        <category>inicio</category>
+        
+        <category>boom</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
