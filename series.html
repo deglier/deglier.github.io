@@ -6,23 +6,23 @@ description: "Procure os assuntos pelas tags."
 ---
 
 <div class="tags">
-{% assign tags_list = site.tags %}
-  {% if tags_list.first[0] == null %}
-    {% for tag in tags_list %}
-        <a data-scroll href="#{{ tag }}">#{{ tag }}</a>
+{% assign serie_list = site.serie %}
+  {% if serie_list.first[0] == null %}
+    {% for serie in serie_list %}
+        <a data-scroll href="#{{ serie.link }}">#{{ serie }}</a>
     {% endfor %}
   {% else %}
-    {% for tag in tags_list %}
-        <a data-scroll href="#{{ tag[0] }}">#{{ tag[0] }}</a>
+    {% for serie in serie_list %}
+        <a data-scroll href="#{{ serie.link[0] }}">#{{ serie[0] }}</a>
     {% endfor %}
   {% endif %}
-{% assign tags_list = nil %}
+{% assign serie_list = null %}
 </div>
 <hr />
-{% for tag in site.tags  %}
-    <h3 class="tag-title" id="{{ tag[0] }}">#{{ tag[0] }}</h3>
+{% for serie in site.serie  %}
+    <h3 class="tag-title" id="{{ série.link[0] }}">#{{ serie[0] }}</h3>
     <nav class="indice">
-        {% assign pages_list = tag[1] %}
+        {% assign pages_list = série.link[1] %}
         {% for post in pages_list reversed %}
             {% if post.title != null %}
             {% if group == null or group == post.group %}
@@ -30,7 +30,7 @@ description: "Procure os assuntos pelas tags."
             {% endif %}
             {% endif %}
         {% endfor %}
-        {% assign pages_list = nil %}
-        {% assign group = nil %}
+        {% assign pages_list = null %}
+        {% assign group = null %}
     </nav>
 {% endfor %}
