@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Tecnologias presentes nesse blog #2'
+title: 'Tecnologias presentes nesse blog parte 2'
 twitter_text: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
 description: 'Falaremos sobre Gulp, Node.js e NPM.'
 introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
