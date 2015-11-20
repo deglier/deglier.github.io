@@ -6,31 +6,18 @@ description: "Encontre todas a séries do blog abaixo"
 ---
 
 <div class="tags">
-{% assign serie_list = site.serie %}
-  {% if serie_list.first[0] == null %}
-    {% for serie in serie_list %}
-        <a data-scroll href="#{{ serie.link }}">#{{ serie }}</a>
+{% for tag in site.categories %}
+  <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</span>
+  <ul class="post-list">
+    {% assign pages_list = tag[1] %}
+    {% for post in pages_list reversed %}
+      {% if post.title != null %}
+      {% if group == null or group == post.group %}
+      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}{% include time.html %}</a></li>
+      {% endif %}
+      {% endif %}
     {% endfor %}
-  {% else %}
-    {% for serie in serie_list %}
-        <a data-scroll href="#{{ serie.link[0] }}">#{{ serie[0] }}</a>
-    {% endfor %}
-  {% endif %}
-{% assign serie_list = null %}
-</div>
-<hr />
-{% for serie in site.serie  %}
-    <h3 class="tag-title" id="{{ série.link[0] }}">#{{ serie[0] }}</h3>
-    <nav class="indice">
-        {% assign pages_list = série.link[1] %}
-        {% for post in pages_list reversed %}
-            {% if post.title != null %}
-            {% if group == null or group == post.group %}
-        <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-        {% assign pages_list = null %}
-        {% assign group = null %}
-    </nav>
+    {% assign pages_list = nil %}
+    {% assign group = nil %}
+  </ul>
 {% endfor %}

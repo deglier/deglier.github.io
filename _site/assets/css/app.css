@@ -451,7 +451,7 @@ html {
 .icon-gplus:before {
   content: "\e907"; }
 
-/*container como um todo - configura├º├Áes gerais*/
+/*container como um todo - configurações gerais*/
 .wrapper {
   overflow: hidden;
   min-height: 100vh; }
@@ -469,7 +469,7 @@ section {
 .show-down section {
   transform: translateY(50px); }
 
-/* MENU - TODAS AS CONFIGURA├ç├òES GERAIS AQUI */
+/* MENU - TODAS AS CONFIGURAÇÕES GERAIS AQUI */
 .menu {
   height: 100%;
   -webkit-transform: translateX(-250px);
@@ -518,7 +518,7 @@ section {
     .menu .pull-down a:hover {
       opacity: 1; }
 
-/* HEADER - TODAS AS CONFIGURA├ç├òES GERAIS AQUI */
+/* HEADER - TODAS AS CONFIGURAÇÕES GERAIS AQUI */
 .header h1 a {
   text-decoration: none; }
 

@@ -6,9 +6,118 @@
 </description>
     <link>http://deglier.github.io/</link>
     <atom:link href="http://deglier.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Nov 2015 08:09:55 -0200</pubDate>
-    <lastBuildDate>Sat, 14 Nov 2015 08:09:55 -0200</lastBuildDate>
-    <generator>Jekyll v3.0.0</generator>
+    <pubDate>Fri, 20 Nov 2015 21:48:34 -0200</pubDate>
+    <lastBuildDate>Fri, 20 Nov 2015 21:48:34 -0200</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Tecnologias presentes nesse blog parte 2</title>
+        <description>&lt;h2 id=&quot;hah&quot;&gt;HAhá!&lt;/h2&gt;
+&lt;p&gt;Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: &lt;strong&gt;Gulp&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;h3 id=&quot;gulp&quot;&gt;Gulp&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://jakesharp.co/wp-content/uploads/2015/03/gulp-logotype-300x187.png&quot; alt=&quot;Gulp logo&quot; title=&quot;Gulp logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagine se tivesse uma maneira de fazer tudo o que você faz ao chegar no trabalho até efetivamente trabalhar de verdade? É disso que se trata o Gulp.&lt;br /&gt;
+Vamos colocar numa situação hipotética de que todos os dias você precisa abrir a porta, abrir as janelas, ligar o ar condicionado, ligar as luzes, ligar os computadores, ‘logar’ na sua estação de trabalho e enfim começar a trabalhar. Você pode até achar normal, já que faz todos os dias, mas se tivesse alguma tecnologia e que só com um click faça tudo isso? Bom, em questão de desenvolvimento e mais precisamente, ‘frontend’, existe! E mais de um, mas o foco aqui será o Gulp.&lt;/p&gt;
+
+&lt;p&gt;O Gulp é conhecido como um &lt;em&gt;task runner&lt;/em&gt;. uma tecnologia baseada em JavaScript que roda sobre um outra tecnologia(também desenvolvida em js), o &lt;a href=&quot;https://nodejs.org/&quot; title=&quot;site do Node.js&quot;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;nodejs&quot;&gt;Node.js&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nodejs.org/static/images/logos/nodejs.png&quot; alt=&quot;Node.js&quot; title=&quot;Logo do Node.js&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Definição que encontramos na Wikipédia sobre Node.js:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha.” - &lt;em&gt;Referência do site &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Node.js&quot; title=&quot;Página da wikipédia que fala sobre o Node.js&quot;&gt;Wikipédia&lt;/a&gt; visualizada em 20 de Novembro de 2015&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Para poder usar o Gulp, você vai precisar ter o nodeJs instalado em sua máquina.&lt;br /&gt;
+O download do Node.js pode ser feito por meio desse &lt;a href=&quot;https://nodejs.org/en/download/&quot; title=&quot; Página de download do Node.js&quot;&gt;link&lt;/a&gt; (em inglês).&lt;/p&gt;
+
+&lt;p&gt;Após a instalação do node.js, instalaremos o Gulp. Vamos usar o terminal (no linux e mac) ou prompt de comandos (no windows). A instalação é feita praticamente da mesma maneira em ambos. Vamos usar a flag &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; para instalar globalmente o Gulp.&lt;/p&gt;
+
+&lt;p&gt;A instalação no windows via prompt fica assim:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+npm install gulp -g
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;E no terminal é a mesma coisa, com a diferença apenas do &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt;, que invoca o &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Sudo&quot; title=&quot;Página da wikipédia sobre SUDO (SuperUser)&quot;&gt;&lt;strong&gt;super user&lt;/strong&gt;&lt;/a&gt; do sistema:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+sudo npm install gulp -g
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;explicando-os-comandos&quot;&gt;Explicando os comandos&lt;/h2&gt;
+
+&lt;h3 id=&quot;npm&quot;&gt;NPM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*0fr3PbT2XqjsMD52sc2-NQ.png&quot; alt=&quot;npm logo&quot; title=&quot; NPM logo&quot; /&gt;&lt;br /&gt;
+NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node). A NPM é duas coisas: Primeiro, e mais importante, é um repositório online para publicação de projetos de código aberto para o Node.js; Segundo, ele é um utilitário de linha de comando que interage com este repositório online, que ajuda na instalação de pacotes, gerenciamento de versão e gerenciamento de dependências e nesse caso o Gulp. Se você quiser ver todos os pacotes que a npm tem clique nesse &lt;a href=&quot;https://www.npmjs.com/&quot; title=&quot;site da NPM&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, bom acho que não preciso nem dizer né. Enfim, ele é um comando do npm e tem a função de instalar um pacote, projeto ou biblioteca presente no repositório online da npm, nesse caso, procura e instala o Gulp.&lt;/p&gt;
+
+&lt;p&gt;A flag &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; faz com esse pacote seja instalado globalmente em sua máquina. O que isso significa? Significa que quando você precisar instalar o Gulp em um projeto, ele vai buscar na sua máquina primeiro e então instala no seu projeto. Veremos isso mais a frente em outro post.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 20 Nov 2015 00:00:00 -0200</pubDate>
+        <link>http://deglier.github.io/tecnologias%20usadas%20nesse%20blog/2015/11/20/tecnologias-do-meu-blog-parte-2.html</link>
+        <guid isPermaLink="true">http://deglier.github.io/tecnologias%20usadas%20nesse%20blog/2015/11/20/tecnologias-do-meu-blog-parte-2.html</guid>
+        
+        <category>planos</category>
+        
+        <category>conteudoDoSite</category>
+        
+        <category>novidades</category>
+        
+        
+        <category>Tecnologias usadas nesse blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Vamos combinar assim?</title>
+        <description>&lt;p&gt;A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que ter]ao espaço aqui também, mas nunca esquecendo que o foco aqui é frontend. Há muita coisa pra ser abordada que facilita o desenvolvimento. Estou planejando algo para facilitar à quem ler e a mim também.&lt;/p&gt;
+
+&lt;h4 id=&quot;pautas-que-sero-bem-abordadas--por-aqui&quot;&gt;Pautas que serão bem abordadas  por aqui:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;b&gt;CSS&lt;/b&gt; - puro e pré processadores como sass e less (talvez stylus rs..)&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;HTML&lt;/b&gt; - puro, markdown, jade … por enquanto são só esses mesmos rs.&lt;/li&gt;
+  &lt;li&gt;&lt;b&gt;JavaScript&lt;/b&gt; - puro, jquery e futuramente: angularJS, reactJS.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;css&quot;&gt;CSS&lt;/h3&gt;
+&lt;p&gt;Com foco sempre que possível em pré processadores, mas sempre dando exemplos dos mesmos códigos na forma natural do CSS. As CSS 3 tem uma infinidade de propriedades e regras que renderão ótimos artigos.&lt;/p&gt;
+
+&lt;h3 id=&quot;html&quot;&gt;HTML&lt;/h3&gt;
+
+&lt;p&gt;Assim como o CSS exitem algumas maneiras de se escrever melhor e mais rápido o HTML. Uma delas é usando &lt;strong&gt;Jade&lt;/strong&gt; um gerador de &lt;em&gt;template&lt;/em&gt; que mostra como o HTML pode ser mais fácil ainda de se aprender/escrever.&lt;/p&gt;
+
+&lt;h3 id=&quot;javascript&quot;&gt;JavaScript&lt;/h3&gt;
+
+&lt;p&gt;E por fim, mas não menos importante, o javascript. Se o javascript fosse um sentimento, certamente ele seria a alegria. E todos os seus sentimentos, tendo como algumas bibliotecas (que facilitam da programação) o &lt;strong&gt;jQuery&lt;/strong&gt;. Sim. Certamente você diria que existem outras bibliotecas.&lt;/p&gt;
+
+&lt;h2 id=&quot;a-unio-faz-a-fora&quot;&gt;A união faz a força&lt;/h2&gt;
+
+&lt;p&gt;Por hoje então é isso pessoal. Tenho muito pra falar e ensinar, tenho certeza que você tambem querem aprender.. um abraço gurigotos ;*&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Nov 2015 00:00:00 -0200</pubDate>
+        <link>http://deglier.github.io/2015/11/16/vamos-combinar-assim.html</link>
+        <guid isPermaLink="true">http://deglier.github.io/2015/11/16/vamos-combinar-assim.html</guid>
+        
+        <category>planos</category>
+        
+        <category>conteudoDoSite</category>
+        
+        <category>novidades</category>
+        
+        
+      </item>
     
       <item>
         <title>Como tudo começou</title>
@@ -18,11 +127,21 @@
 
 &lt;h4 id=&quot;era-uma-vez-uma-lan-house-&quot;&gt;Era uma vez, uma lan-house :)&lt;/h4&gt;
 
-&lt;p&gt;Pois é, eu trabalhava em uma lan-house que do nada eu, sem querer mesmo, pressione uma tecla no teclado que fez abrir o código fonte do &lt;s&gt;falecido&lt;/s&gt; &lt;strong&gt;Orkut&lt;/strong&gt;. Fiquei &lt;s&gt;mavilindo&lt;/s&gt; maravilhado e ao mesmo tempo não entendi bem o que eu estava vendo. Só que na hora aquilo me deu uma &lt;s&gt;puta&lt;/s&gt; curiosidade e fui no &lt;s&gt;pai dos burros&lt;/s&gt; Google procurar ao mesmo entendo o que era tudo aquilo que eu estava vendo.&lt;/p&gt;
+&lt;p&gt;Pois é, eu trabalhava em uma lan-house que do nada eu, sem querer mesmo, pressione uma tecla no teclado que fez abrir o código fonte do &lt;s&gt;falecido&lt;/s&gt; &lt;strong&gt;Orkut&lt;/strong&gt;. Fiquei &lt;s&gt;mavilindo&lt;/s&gt; maravilhado e ao mesmo tempo não entendi bem o que eu estava vendo. Só que na hora aquilo me deu uma &lt;s&gt;puta&lt;/s&gt; curiosidade e fui no &lt;s&gt;pai dos burros&lt;/s&gt; &lt;strong&gt;Google&lt;/strong&gt; procurar algo que poderia fazer com que eu entendesse tudo aquilo que pra mim não era comum.&lt;/p&gt;
+
+&lt;p&gt;Então, nessa minha pesquisa, eu acabei encontrando um site de cursos &lt;em&gt;onlines&lt;/em&gt;, com cursos &lt;em&gt;gratuitos&lt;/em&gt;… Enfim, acabei por fazer &lt;s&gt;um&lt;/s&gt; dois cursos: &lt;strong&gt;HTML&lt;/strong&gt;(Hyper Text Markup Language) e &lt;strong&gt;CSS&lt;/strong&gt;(Cascade Style Sheet).&lt;/p&gt;
+
+&lt;h3 id=&quot;propsito-desse-blog&quot;&gt;Propósito desse blog&lt;/h3&gt;
+&lt;p&gt;Eu já tinha esse projeto em mente já há algum tempo, mas devido muito coisas que me ocorreram ele foi focando de lado. E ‘cá’ estou agora realizando um desejo de vida.&lt;br /&gt;
+Espero que através desse meio que teremos, possamos aprender mais e você aprender mais.&lt;br /&gt;
+Minha concepção de conhecimento só tem sentindo quando eu posso passar o mesmo que sei para outras pessoas.&lt;/p&gt;
+
+&lt;p&gt;Aos poucos vou falando mais de mim e ajudando a plataforma também. Até mais gurigotos. :p&lt;/p&gt;
+
 </description>
         <pubDate>Fri, 13 Nov 2015 00:00:00 -0200</pubDate>
-        <link>http://deglier.github.io/como-tudo-comecou/</link>
-        <guid isPermaLink="true">http://deglier.github.io/como-tudo-comecou/</guid>
+        <link>http://deglier.github.io/2015/11/13/como-tudo-comecou.html</link>
+        <guid isPermaLink="true">http://deglier.github.io/2015/11/13/como-tudo-comecou.html</guid>
         
         <category>inicio</category>
         

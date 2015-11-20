@@ -5,13 +5,14 @@ twitter_text: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
 description: 'Falaremos sobre Gulp, Node.js e NPM.'
 introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
 imagem: /assets/img/vamos-combinar/main.jpg
-serie: 'Tecnologias do blog'
+serie: 'Tecnologias presentes nesse blog'
 serie-link: tecnologias-do-blog
+categories:
+- 'Tecnologias usadas nesse blog'
 tags:
   - planos
   - conteudoDoSite
   - novidades
-permalink: /tecnologias-do-meu-blog-parte-2/
 ---
 
 
@@ -41,14 +42,17 @@ Após a instalação do node.js, instalaremos o Gulp. Vamos usar o terminal (no 
 
 A instalação no windows via prompt fica assim:
 
-````
-npm install gulp -g
-````
+````bash
 
+npm install gulp -g
+
+````
 E no terminal é a mesma coisa, com a diferença apenas do `sudo`, que invoca o [**super user**](https://pt.m.wikipedia.org/wiki/Sudo "Página da wikipédia sobre SUDO (SuperUser)" ) do sistema:
 
-````
+````bash
+
 sudo npm install gulp -g
+
 ````
 
 

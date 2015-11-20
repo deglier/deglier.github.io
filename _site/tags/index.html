@@ -111,16 +111,22 @@
 <section class="container-post">
    <header class="header-post">
        <h2 class="title">#Tags</h2>
-       <p class="lead"></p>
+       <p class="lead">Procure os assuntos pelas tags.</p>
    </header>
     <article class="post">
         <div class="tags">
 
   
     
-        <a data-scroll href="#inicio">#inicio</a>
+        <a class="scroll" href="#inicio">#inicio</a>
     
-        <a data-scroll href="#boom">#boom</a>
+        <a class="scroll" href="#boom">#boom</a>
+    
+        <a class="scroll" href="#planos">#planos</a>
+    
+        <a class="scroll" href="#conteudoDoSite">#conteudoDoSite</a>
+    
+        <a class="scroll" href="#novidades">#novidades</a>
     
   
 
@@ -133,7 +139,7 @@
         
             
             
-        <h4><a href="http://deglier.github.io/como-tudo-comecou/">Como tudo começou</a></h4>
+        <h4><a href="http://deglier.github.io/2015/11/13/como-tudo-comecou.html">Como tudo começou</a></h4>
             
             
         
@@ -147,7 +153,67 @@
         
             
             
-        <h4><a href="http://deglier.github.io/como-tudo-comecou/">Como tudo começou</a></h4>
+        <h4><a href="http://deglier.github.io/2015/11/13/como-tudo-comecou.html">Como tudo começou</a></h4>
+            
+            
+        
+        
+        
+    </nav>
+
+    <h3 class="tag-title" id="planos">#planos</h3>
+    <nav class="indice">
+        
+        
+            
+            
+        <h4><a href="http://deglier.github.io/2015/11/16/vamos-combinar-assim.html">Vamos combinar assim?</a></h4>
+            
+            
+        
+            
+            
+        <h4><a href="http://deglier.github.io/tecnologias%20usadas%20nesse%20blog/2015/11/20/tecnologias-do-meu-blog-parte-2.html">Tecnologias presentes nesse blog parte 2</a></h4>
+            
+            
+        
+        
+        
+    </nav>
+
+    <h3 class="tag-title" id="conteudoDoSite">#conteudoDoSite</h3>
+    <nav class="indice">
+        
+        
+            
+            
+        <h4><a href="http://deglier.github.io/2015/11/16/vamos-combinar-assim.html">Vamos combinar assim?</a></h4>
+            
+            
+        
+            
+            
+        <h4><a href="http://deglier.github.io/tecnologias%20usadas%20nesse%20blog/2015/11/20/tecnologias-do-meu-blog-parte-2.html">Tecnologias presentes nesse blog parte 2</a></h4>
+            
+            
+        
+        
+        
+    </nav>
+
+    <h3 class="tag-title" id="novidades">#novidades</h3>
+    <nav class="indice">
+        
+        
+            
+            
+        <h4><a href="http://deglier.github.io/2015/11/16/vamos-combinar-assim.html">Vamos combinar assim?</a></h4>
+            
+            
+        
+            
+            
+        <h4><a href="http://deglier.github.io/tecnologias%20usadas%20nesse%20blog/2015/11/20/tecnologias-do-meu-blog-parte-2.html">Tecnologias presentes nesse blog parte 2</a></h4>
             
             
         
@@ -156,6 +222,7 @@
     </nav>
 
 </article>
+
     </section>
 <footer class="footer"><p>Feito com &#9829; e Jekyll.</p></footer>
         </div>
@@ -166,6 +233,14 @@
 <script src="/assets/js/highlight.pack.js" type="text/javascript"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="/assets/js/main.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function() { 
+        $(".scroll").click(function(event){        
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+       });
+    });
+</script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 var gulp            =   require('gulp');
-var browserSync     =   require('browser-sync').create();
+var browserSync     =   require('browser-sync');
 var autoprefixer    =   require('gulp-autoprefixer');
 var concat          =   require('gulp-concat');
 var jade            =   require('gulp-jade');
@@ -12,14 +12,29 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Rodando:</span> $ jekyll build'
 };
 
-gulp.task('serve', function(){
-    browserSync.init({
+
+
+
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
+/**
+ * Refaz o site e atualiza a página
+ */
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+
+
+gulp.task('browser-sync', ['jekyll-build'], function() {
+    browserSync({
         server: {
             baseDir: '_site'
         }
     });
-    
-    gulp.watch('_site/*').on('change', browserSync.reload);
 });
 
 /**
@@ -38,19 +53,21 @@ gulp.task('js', function(){
 * otimiza imagens
 */
 gulp.task('imagemin', function() {
-	return gulp.src('src/img/**/*.{jpg,png,gif}')
-		.pipe(plumber())
-		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
-		.pipe(gulp.dest('assets/img/'));
+    return gulp.src('src/img/**/*.{jpg,png,gif}')
+        .pipe(plumber())
+        .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+        .pipe(gulp.dest('assets/img/'));
 });
 
 /**
 * vigia tudo à procura de mudanças e tarefa default
 */
 
-gulp.task('watch', function(){
+
+gulp.task('watch', function () {
     gulp.watch('src/js/**/*.js', ['js']);
-    gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['js', 'imagemin', 'watch', 'serve'])
+gulp.task('default', ['js', 'imagemin', 'browser-sync', 'watch']);

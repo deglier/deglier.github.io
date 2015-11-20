@@ -9,7 +9,6 @@ categoria:
 tags:
   - inicio
   - boom
-permalink: /como-tudo-comecou/
 ---
 
 ### olá

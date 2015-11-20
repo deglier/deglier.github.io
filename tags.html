@@ -9,11 +9,11 @@ description: "Procure os assuntos pelas tags."
 {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
-        <a data-scroll href="#{{ tag }}">#{{ tag }}</a>
+        <a class="scroll" href="#{{ tag }}">#{{ tag }}</a>
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}
-        <a data-scroll href="#{{ tag[0] }}">#{{ tag[0] }}</a>
+        <a class="scroll" href="#{{ tag[0] }}">#{{ tag[0] }}</a>
     {% endfor %}
   {% endif %}
 {% assign tags_list = nil %}
