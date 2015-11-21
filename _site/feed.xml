@@ -6,17 +6,17 @@
 </description>
     <link>http://deglier.github.io/</link>
     <atom:link href="http://deglier.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Nov 2015 22:47:05 -0200</pubDate>
-    <lastBuildDate>Fri, 20 Nov 2015 22:47:05 -0200</lastBuildDate>
+    <pubDate>Sat, 21 Nov 2015 00:53:29 -0200</pubDate>
+    <lastBuildDate>Sat, 21 Nov 2015 00:53:29 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Tecnologias presentes nesse blog parte 2</title>
+        <title>Tecnologias presentes nesse blog - parte #2</title>
         <description>&lt;h2 id=&quot;ah&quot;&gt;Ahá!&lt;/h2&gt;
 &lt;p&gt;Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: &lt;strong&gt;Gulp&lt;/strong&gt;!&lt;/p&gt;
 
 &lt;h3 id=&quot;gulp&quot;&gt;Gulp&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;http://jakesharp.co/wp-content/uploads/2015/03/gulp-logotype-300x187.png&quot; alt=&quot;Gulp logo&quot; title=&quot;Gulp logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/gulp-logo.png&quot; alt=&quot;Gulp logo&quot; title=&quot;Gulp logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Imagine se tivesse uma maneira de fazer tudo o que você faz ao chegar no trabalho até efetivamente trabalhar de verdade? É disso que se trata o Gulp.&lt;br /&gt;
 Vamos colocar numa situação hipotética de que todos os dias você precisa abrir a porta, abrir as janelas, ligar o ar condicionado, ligar as luzes, ligar os computadores, ‘logar’ na sua estação de trabalho e enfim começar a trabalhar. Você pode até achar normal, já que faz todos os dias, mas se tivesse alguma tecnologia e que só com um click faça tudo isso? Bom, em questão de desenvolvimento e mais precisamente, ‘frontend’, existe! E mais de um, mas o foco aqui será o Gulp.&lt;/p&gt;
@@ -25,12 +25,14 @@ Vamos colocar numa situação hipotética de que todos os dias você precisa abr
 
 &lt;h2 id=&quot;nodejs&quot;&gt;Node.js&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://nodejs.org/static/images/logos/nodejs.png&quot; alt=&quot;Node.js&quot; title=&quot;Logo do Node.js&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/nodejs-logo.png&quot; alt=&quot;Node.js&quot; title=&quot;Logo do Node.js&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Definição que encontramos na Wikipédia sobre Node.js:&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha.” - &lt;em&gt;Referência do site &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Node.js&quot; title=&quot;Página da wikipédia que fala sobre o Node.js&quot;&gt;Wikipédia&lt;/a&gt; visualizada em 20 de Novembro de 2015&lt;/em&gt;&lt;/p&gt;
+  &lt;p&gt;“Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha.”&lt;/p&gt;
+
+  &lt;p&gt;—&lt;em&gt;Referência do site &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Node.js&quot; title=&quot;Página da wikipédia que fala sobre o Node.js&quot;&gt;Wikipédia&lt;/a&gt; visualizada em 20 de Novembro de 2015&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Para poder usar o Gulp, você vai precisar ter o nodeJs instalado em sua máquina.&lt;br /&gt;
@@ -57,16 +59,17 @@ sudo npm install gulp -g
 
 &lt;h3 id=&quot;npm&quot;&gt;NPM&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/800/1*0fr3PbT2XqjsMD52sc2-NQ.png&quot; alt=&quot;npm logo&quot; title=&quot; NPM logo&quot; /&gt;&lt;br /&gt;
-NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node). A NPM é duas coisas: Primeiro, e mais importante, é um repositório online para publicação de projetos de código aberto para o Node.js; Segundo, ele é um utilitário de linha de comando que interage com este repositório online, que ajuda na instalação de pacotes, gerenciamento de versão e gerenciamento de dependências e nesse caso o Gulp. Se você quiser ver todos os pacotes que a npm tem clique nesse &lt;a href=&quot;https://www.npmjs.com/&quot; title=&quot;site da NPM&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/npm-logo.png&quot; alt=&quot;npm logo&quot; title=&quot; NPM logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node). A NPM é duas coisas: Primeiro, e mais importante, é um repositório online para publicação de projetos de código aberto para o Node.js; Segundo, ele é um utilitário de linha de comando que interage com este repositório online, que ajuda na instalação de pacotes, gerenciamento de versão e gerenciamento de dependências e nesse caso o Gulp. Se você quiser ver todos os pacotes que a npm tem clique nesse &lt;a href=&quot;https://www.npmjs.com/&quot; title=&quot;site da NPM&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, bom acho que não preciso nem dizer né. Enfim, ele é um comando do npm e tem a função de instalar um pacote, projeto ou biblioteca presente no repositório online da npm, nesse caso, procura e instala o Gulp.&lt;/p&gt;
 
 &lt;p&gt;A flag &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; faz com esse pacote seja instalado globalmente em sua máquina. O que isso significa? Significa que quando você precisar instalar o Gulp em um projeto, ele vai buscar na sua máquina primeiro e então instala no seu projeto. Veremos isso mais a frente em outro post.&lt;/p&gt;
 </description>
         <pubDate>Fri, 20 Nov 2015 00:00:00 -0200</pubDate>
-        <link>http://deglier.github.io/makingof/2015/11/20/tecnologias-do-meu-blog-parte-2.html</link>
-        <guid isPermaLink="true">http://deglier.github.io/makingof/2015/11/20/tecnologias-do-meu-blog-parte-2.html</guid>
+        <link>http://deglier.github.io/tecnologias-do-meu-blog-parte-2/</link>
+        <guid isPermaLink="true">http://deglier.github.io/tecnologias-do-meu-blog-parte-2/</guid>
         
         <category>making-of</category>
         
@@ -75,7 +78,7 @@ NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node).
         <category>linguagens</category>
         
         
-        <category>MakingOf</category>
+        <category>Making Of</category>
         
       </item>
     
@@ -107,8 +110,8 @@ NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node).
 &lt;p&gt;Por hoje então é isso pessoal. Tenho muito pra falar e ensinar, tenho certeza que você tambem querem aprender.. um abraço gurigotos ;*&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Nov 2015 00:00:00 -0200</pubDate>
-        <link>http://deglier.github.io/2015/11/16/vamos-combinar-assim.html</link>
-        <guid isPermaLink="true">http://deglier.github.io/2015/11/16/vamos-combinar-assim.html</guid>
+        <link>http://deglier.github.io/vamos-combinar-assim/</link>
+        <guid isPermaLink="true">http://deglier.github.io/vamos-combinar-assim/</guid>
         
         <category>planos</category>
         
@@ -140,8 +143,8 @@ Minha concepção de conhecimento só tem sentindo quando eu posso passar o mesm
 
 </description>
         <pubDate>Fri, 13 Nov 2015 00:00:00 -0200</pubDate>
-        <link>http://deglier.github.io/2015/11/13/como-tudo-comecou.html</link>
-        <guid isPermaLink="true">http://deglier.github.io/2015/11/13/como-tudo-comecou.html</guid>
+        <link>http://deglier.github.io/como-tudo-comecou/</link>
+        <guid isPermaLink="true">http://deglier.github.io/como-tudo-comecou/</guid>
         
         <category>inicio</category>
         

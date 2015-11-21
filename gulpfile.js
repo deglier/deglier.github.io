@@ -66,7 +66,8 @@ gulp.task('imagemin', function() {
 
 gulp.task('watch', function () {
     gulp.watch('src/js/**/*.js', ['js']);
-     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
+    gulp.watch('_sass/**/*.scss', ['jekyll-rebuild']);
+    gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
     gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

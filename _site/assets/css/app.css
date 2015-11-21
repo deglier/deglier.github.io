@@ -382,10 +382,7 @@ html, .header h1, .footer, .footer p, .home article .title {
 .menu, a.header-menu--icon, .queryIcon, .footer {
   position: absolute; }
 
-.canvas, section, .show-down section, .menu-list li a, .menu-list li a:hover, .menu .pull-down a, .menu .pull-down a:hover, .header-search--form a, .header-search--form a:hover, .header-search--form, .container-post .post a:hover:after, .container-post .post a:hover:before, .container-post .footer-post a:hover .icon-facebook,
-.container-post .footer-post a:hover .icon-twitter,
-.container-post .footer-post a:hover .icon-whatsapp,
-.container-post .footer-post a:hover .icon-gplus, .container-post .footer-post .icon-facebook,
+.canvas, section, .show-down section, .menu-list li a, .menu-list li a:hover, .menu .pull-down a, .menu .pull-down a:hover, .header-search--form a, .header-search--form a:hover, .header-search--form, .container-post .post a:hover:after, .container-post .post a:hover:before, .container-post .footer-post .icon-facebook,
 .container-post .footer-post .icon-twitter,
 .container-post .footer-post .icon-whatsapp,
 .container-post .footer-post .icon-gplus {
@@ -661,6 +658,10 @@ a.header-menu--icon {
   .container-post .header-post time:after {
     content: " -";
     margin-left: 5px; }
+  .container-post .post img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block; }
   .container-post .post code {
     background: #f8f8f8;
     padding: 0 5px;
@@ -736,24 +737,10 @@ a.header-menu--icon {
       color: #4dc247; }
     .container-post .footer-post a .icon-gplus {
       color: #d34836; }
-    .container-post .footer-post a:hover .icon-facebook {
-      color: #3b5998; }
-    .container-post .footer-post a:hover .icon-twitter {
-      color: #00aced; }
-    .container-post .footer-post a:hover .icon-whatsapp {
-      color: #4dc247; }
-    .container-post .footer-post a:hover .icon-gplus {
-      color: #d34836; }
-    .container-post .footer-post a:hover .icon-facebook,
-    .container-post .footer-post a:hover .icon-twitter,
-    .container-post .footer-post a:hover .icon-whatsapp,
-    .container-post .footer-post a:hover .icon-gplus {
-      opacity: 1; }
   .container-post .footer-post .icon-facebook,
   .container-post .footer-post .icon-twitter,
   .container-post .footer-post .icon-whatsapp,
   .container-post .footer-post .icon-gplus {
-    opacity: 0.5;
     margin: 10px 5px; }
 
 @media screen and (max-width: 768px) {
@@ -914,13 +901,6 @@ body.html h2.title:before {
   height: 1em;
   fill: currentColor; }
 
-/* =======================================================================================
-Example showing how to change the color/size of the icons:
-.icon-name {
-	font-size: 32px; // works because "width" & "height" were set using em units
-	color: red; // works for single-colored icons, because "fill" was set to "currentColor"
-}
-======================================================================================== */
 .icon-js {
   width: 0.8818359375em; }
 

@@ -388,6 +388,11 @@ a.header-menu--icon{
         }
     }
     .post {
+        img {
+            max-width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
         code {
             background: #f8f8f8;
             padding: 0 5px;
@@ -489,34 +494,12 @@ a.header-menu--icon{
             .icon-gplus {
                 color: #d34836;
             }
-            &:hover{
-                .icon-facebook {
-                    color: #3b5998;
-                }
-                .icon-twitter {
-                    color: #00aced;
-                }
-                .icon-whatsapp {
-                    color: #4dc247;
-                }
-                .icon-gplus {
-                    color: #d34836;
-                }
-                .icon-facebook,
-                .icon-twitter,
-                .icon-whatsapp,
-                .icon-gplus {
-                    opacity: 1;
-                    @extend %transition-ease-in-out-300ms;
-                }
-            }
         }
         
         .icon-facebook,
         .icon-twitter,
         .icon-whatsapp,
         .icon-gplus {
-            opacity: 0.5;
             margin: 10px 5px;
             @extend %transition-ease-in-out-300ms;
         }
