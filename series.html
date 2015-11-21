@@ -13,7 +13,7 @@ description: "Encontre todas a séries do blog abaixo"
     {% for post in pages_list reversed %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
-      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}{% include time.html %}</a></li>
+      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }} - {% include time.html %}</a></li>
       {% endif %}
       {% endif %}
     {% endfor %}
