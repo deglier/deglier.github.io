@@ -16,7 +16,7 @@ tags:
 ---
 
 
-## HAhá!
+## Ahá!
 Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: **Gulp**!
 
 ### Gulp
