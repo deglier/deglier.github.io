@@ -9,7 +9,6 @@ tags:
   - planos
   - conteudoDoSite
   - novidades
-permalink: /vamos-combinar-assim/
 ---
 A intenção principal do blog seria/será falar e desmistificar tudo que for possível de HTML5, CSS3 e JavaScript. Conheço algumas outras linguagens, que ter]ao espaço aqui também, mas nunca esquecendo que o foco aqui é frontend. Há muita coisa pra ser abordada que facilita o desenvolvimento. Estou planejando algo para facilitar à quem ler e a mim também.
 

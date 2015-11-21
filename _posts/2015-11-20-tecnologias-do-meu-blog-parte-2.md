@@ -4,7 +4,7 @@ title: 'Tecnologias presentes nesse blog - parte #2'
 twitter_text: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
 description: 'Nessa segunda parte falaremos sobre Gulp, Node.js e npm.'
 introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
-imagem: /assets/img/tecs-do-blog-parte-2/main.jpg
+imagem: tecs-do-blog-parte-2/main.jpg
 serie: 'Tecnologias presentes nesse blog'
 categories:
 - 'Making Of'
@@ -12,7 +12,6 @@ tags:
   - making-of
   - tecnologias
   - linguagens
-permalink: /tecnologias-do-meu-blog-parte-2/
 ---
 
 

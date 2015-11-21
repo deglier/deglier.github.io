@@ -4,12 +4,13 @@ title:  "Como tudo começou"
 twitter_text: 'Quando o boom da web expldiu dentro de mim'
 description: 'Quando o boom da web expldiu dentro de mim.'
 introduction: 'Quando o boom da web expldiu dentro de mim e como surgiu o meu interesse por programação.'
-image: '/assets/img/como-tudo-comecou/main.png'
+imagem: '/assets/img/como-tudo-comecou/main.png'
+categories:
+- 'misc'
 categoria:
 tags:
   - inicio
   - boom
-permalink: /como-tudo-comecou/
 ---
 
 ### olá

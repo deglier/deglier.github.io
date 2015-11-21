@@ -8,12 +8,5 @@
 <script src="{{ "/assets/js/highlight.pack.js" | prepend: site.baseurl }}" type="text/javascript"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-<script type="text/javascript">
-    $(document).ready(function() { 
-        $(".scroll").click(function(event){        
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
-       });
-    });
-</script>
+<a href="#top" class="scroll fixed-button"><svg><use xlink:href="{{ "/assets/img/angle-up.svg#up" | prepend: site.baseurl }}" ></use></svg></a>
 </body>

@@ -16,8 +16,9 @@ face_username: deglier.amorim
 twitter_username: degliersa
 github_username:  deglier
 analytics_id: UA-70396889-1
-
+facebook_id: 1520500464940705
 # Build settings
+permalink: /:title/
 markdown: kramdown
 kramdown:
   input: GFM

@@ -1,11 +1,13 @@
 var gulp            =   require('gulp');
 var browserSync     =   require('browser-sync');
-var autoprefixer    =   require('gulp-autoprefixer');
+var prefix          =   require('gulp-autoprefixer');
 var concat          =   require('gulp-concat');
 var jade            =   require('gulp-jade');
 var plumber         =   require('gulp-plumber');
 var uglify          =   require('gulp-uglify');
 var imagemin        =   require('gulp-imagemin');
+var sass            =   require('gulp-sass');
+var cssmin          =   require('gulp-cssmin');
 var cp              =   require('child_process');
 
 var messages = {
@@ -24,12 +26,25 @@ gulp.task('jekyll-build', function (done) {
 /**
  * Refaz o site e atualiza a página
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-build'], function() {
     browserSync.reload();
 });
 
+gulp.task('sass', function() {
+    return gulp.src('src/scss/app.scss')
+        .pipe(sass({ style: 'compressed',
+            includePaths: ['scss'],
+            onError: browserSync.notify
+        }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(cssmin())
+        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css'));
+});
 
-gulp.task('browser-sync', ['jekyll-build'], function() {
+
+gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -65,10 +80,10 @@ gulp.task('imagemin', function() {
 
 
 gulp.task('watch', function () {
+    gulp.watch('src/scss/**', ['sass']);
     gulp.watch('src/js/**/*.js', ['js']);
-    gulp.watch('_sass/**/*.scss', ['jekyll-rebuild']);
     gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['./*', '_posts/*.md', '_layouts/*.html', '_includes/*.html'], ['jekyll-rebuild']);
 });
 
-gulp.task('default', ['js', 'imagemin', 'browser-sync', 'watch']);
+gulp.task('default', ['sass', 'js', 'imagemin', 'browser-sync', 'watch']);

@@ -12,5 +12,4 @@ tags:
   - making-of
   - tecnologias
   - linguagens
-permalink: /tecnologias-do-meu-blog-parte-1/
 ---

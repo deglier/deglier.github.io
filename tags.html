@@ -5,15 +5,15 @@ permalink: /tags/
 description: "Procure os assuntos pelas tags."
 ---
 
-<div class="tags">
+<div class="tags tag-lists">
 {% assign tags_list = site.tags %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}
-        <a class="scroll" href="#{{ tag }}">#{{ tag }}</a>
+        <a class="scroll" href="#{{ tag }}"> #{{ tag }} </a> 
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}
-        <a class="scroll" href="#{{ tag[0] }}">#{{ tag[0] }}</a>
+        <a class="scroll" href="#{{ tag[0] }}"> #{{ tag[0] }} </a> 
     {% endfor %}
   {% endif %}
 {% assign tags_list = nil %}
@@ -32,5 +32,7 @@ description: "Procure os assuntos pelas tags."
         {% endfor %}
         {% assign pages_list = nil %}
         {% assign group = nil %}
+        <a class="scroll right" href="#topo">subir</a>
+        <hr>
     </nav>
 {% endfor %}
