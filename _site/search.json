@@ -11,6 +11,16 @@
     } ,
   
     {
+      "titulo"    : "Tecnologias presentes nesse blog - parte #1",
+      "categoria" : "",
+      "tags"      : "making-of, tecnologias, linguagens",
+      "url"       : "/tecnologias-do-meu-blog-parte-1/",
+      "data"      : "2015-11-18 00:00:00 -0200",
+      "intro"     : "Falaremos sobre Gulp, Node.js e NPM.",   
+      "conteudo"  : ""
+    } ,
+  
+    {
       "titulo"    : "Vamos combinar assim?",
       "categoria" : "",
       "tags"      : "planos, conteudoDoSite, novidades",

@@ -15,6 +15,7 @@ url: "http://deglier.github.io" # the base hostname & protocol for your site
 face_username: deglier.amorim
 twitter_username: degliersa
 github_username:  deglier
+analytics_id: UA-70396889-1
 
 # Build settings
 markdown: kramdown
