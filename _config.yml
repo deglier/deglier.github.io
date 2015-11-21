@@ -26,6 +26,7 @@ links:
     url: /
   - title: Tags
     url: /tags
-    
+  - title: Séries
+    url: /series
 
 exclude: ['package.json', 'src', 'node_modules', 'dependencias.txt', 'gulpfile.js']
