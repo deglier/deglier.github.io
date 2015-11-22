@@ -1,0 +1,11 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="pt-br">
+{% include head.html %}
+<body class='    {% if page.categoria == "html" %}html{% endif %}{% if page.categoria == "css" %}css{% endif %}{% if page.categoria == "js" %}js{% endif %}{% if page.categoria == null  %}base{% endif %}'>
+<div class="wrapper">
+   <div class="canvas">
+    {{ content }}
+</html>

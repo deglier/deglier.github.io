@@ -8,8 +8,15 @@
 # Site settings
 title: deglier amorim - Desenvolvedor Web
 email: degliersa@gmail.com
+author: Deglier Amorim
+
+author:
+  name: Deglier Amorim
+  email: degliersa@gmail.com
+
 description: > # this means to ignore newlines until "baseurl:"
   Um blog para simplicar a vida do programador Web :)
+keywords: "css, html, js, jekyll, blog, jquery, gulp, sass"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://deglier.github.io" # the base hostname & protocol for your site
 face_username: deglier.amorim
@@ -22,6 +29,16 @@ permalink: /:title/
 markdown: kramdown
 kramdown:
   input: GFM
+
+
+compress_html:
+  clippings: [script]
+  comments: []
+  endings: []
+  profile: false
+  ignore:
+    envs: []
+
 
 links:
   - title: Home

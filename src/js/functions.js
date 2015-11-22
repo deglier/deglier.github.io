@@ -34,13 +34,8 @@ function queryAction() {
     }
     if(search.classList.contains('show-search')){
         queryIcon.classList.add('open');
-        document.getElementById('search-input').focus();
     } else {
-        queryIcon.classList.remove('open');
-        document.getElementById('search-input').blur();        
-    }
-    if(document.getElementById('search-input').blur()){
-        document.getElementById('search-input').value="";
+        queryIcon.classList.remove('open');    
     }
 }
 

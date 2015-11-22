@@ -11,8 +11,24 @@
     </a>
     <h1 class="header-title"><a href="{{ site.url }}">deglier<b>amorim</b></a></h1>
     <div class="header-search--form">
-        <input type="text" id="search-input" class="form-input" placeholder="Escreva alguma coisa :)">
-        <div id="results-container"></div>
+    <div class="search-box">
+<script>
+  (function() {
+    var cx = '006760697026602037000:2v8calt7vqe';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:searchbox></gcse:searchbox></div>
+        <!--<input type="text" id="search-input" class="form-input" placeholder="Escreva alguma coisa :)">-->
+        <div class="search-results">
+            <gcse:searchresults></gcse:searchresults>
+        </div>
     </div>
 </header>
     <div class="container">

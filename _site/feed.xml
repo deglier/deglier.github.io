@@ -6,85 +6,143 @@
 </description>
     <link>http://deglier.github.io/</link>
     <atom:link href="http://deglier.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Nov 2015 13:57:28 -0200</pubDate>
-    <lastBuildDate>Sat, 21 Nov 2015 13:57:28 -0200</lastBuildDate>
+    <pubDate>Sun, 22 Nov 2015 06:30:54 -0200</pubDate>
+    <lastBuildDate>Sun, 22 Nov 2015 06:30:54 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Tecnologias presentes nesse blog - parte #2</title>
-        <description>&lt;h2 id=&quot;ah&quot;&gt;Ahá!&lt;/h2&gt;
-&lt;p&gt;Sim, vou contar. A primeira série do blog será sobre todas as tecnologias que usei para a criação desse blog. Como tema do segundo artigo da série vamos falar de: &lt;strong&gt;Gulp&lt;/strong&gt;!&lt;/p&gt;
+        <title>Tecnologias presentes nesse blog - parte #1</title>
+        <description>&lt;p&gt;Pra iniciar a primeira série do blog, irei falar e revelar todos os segredinhos que estão aqui nesse blog.&lt;/p&gt;
 
-&lt;h3 id=&quot;gulp&quot;&gt;Gulp&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/gulp-logo.png&quot; alt=&quot;Gulp logo&quot; title=&quot;Gulp logo&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;sem-delongas&quot;&gt;sem “delongas”&lt;/h3&gt;
 
-&lt;p&gt;Imagine se tivesse uma maneira de fazer tudo o que você faz ao chegar no trabalho até efetivamente trabalhar de verdade? É disso que se trata o Gulp.&lt;br /&gt;
-Vamos colocar numa situação hipotética de que todos os dias você precisa abrir a porta, abrir as janelas, ligar o ar condicionado, ligar as luzes, ligar os computadores, ‘logar’ na sua estação de trabalho e enfim começar a trabalhar. Você pode até achar normal, já que faz todos os dias, mas se tivesse alguma tecnologia e que só com um click faça tudo isso? Bom, em questão de desenvolvimento e mais precisamente, ‘frontend’, existe! E mais de um, mas o foco aqui será o Gulp.&lt;/p&gt;
+&lt;p&gt;Não vou me atentar em explicar cada “coisinha” que tem no blog em um primeiro momento; aos poucos vou falando e me aprofudando com os temas e assuntos assim como nas tecnologias empregadas nesse blog.&lt;/p&gt;
 
-&lt;p&gt;O Gulp é conhecido como um &lt;em&gt;task runner&lt;/em&gt;. uma tecnologia baseada em JavaScript que roda sobre um outra tecnologia(também desenvolvida em js), o &lt;a href=&quot;https://nodejs.org/&quot; title=&quot;site do Node.js&quot;&gt;Node.js&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;tecnologias-do-blog&quot;&gt;Tecnologias do blog&lt;/h2&gt;
 
-&lt;h2 id=&quot;nodejs&quot;&gt;Node.js&lt;/h2&gt;
+&lt;p&gt;Se tem uma coisa que sou, são necessariamente duas: uma, sou bem curioso e procuro sempre coisas novas e inovadoras; dois, costumo ser bem determinado no que quero e no que faço. Por esse motivo, as tecnologias aqui presentes são &lt;em&gt;relativamente&lt;/em&gt; novas. Vamos a lista:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/nodejs-logo.png&quot; alt=&quot;Node.js&quot; title=&quot;Logo do Node.js&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; - como base do blog, sendo um gerador de páginas estáticas. No momento o meu preferido :)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulp.js&lt;/a&gt;&lt;/strong&gt; - o primeiro automatizador que conheci, e até agora, o que eu mais amo.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://pt.wikipedia.org/wiki/SVG&quot;&gt;SVG&lt;/a&gt;&lt;/strong&gt; - ícones escaláveis, fáceis de utilizar e super leves, ou seja, vetores no navegador &amp;lt;3. Tem coisa melhor *-* ?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://sass-lang.com/&quot;&gt;Sass&lt;/a&gt;&lt;/strong&gt; - Não tem como nao amar esse pre-processador. Simplesmente perfeito!&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;&lt;/strong&gt; - onde fica hospedado o blog e seu código-fonte.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Definição que encontramos na Wikipédia sobre Node.js:&lt;/p&gt;
+&lt;p&gt;Antes de tudo você vai precisar de duas coisas ja preparadas no seu desktop. São elas: &lt;strong&gt;&lt;a href=&quot;https://nodejs.org/en/&quot;&gt;Node.js&lt;/a&gt;&lt;/strong&gt; e &lt;strong&gt;&lt;a href=&quot;https://www.ruby-lang.org/pt/&quot;&gt;Ruby&lt;/a&gt;&lt;/strong&gt;, mas pra nao saírem por ai falando que nao ensino nada, aqui vai um dica rápida sobre ambos:&lt;/p&gt;
+
+&lt;h4 id=&quot;instalando-o-nodejs&quot;&gt;Instalando o Node.js&lt;/h4&gt;
+
+&lt;p&gt;A intalação é feita de acordo com o seu sistema: vou ser bem superficial em relação a isso:&lt;/p&gt;
+
+&lt;p&gt;Para Windows e Mac, você pode fazer o download do pacote compilado por meio &lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;desse link&lt;/a&gt;. Se o seu caso é o linux tambem tem lá o pacote do node para download, mas é relativamente &lt;em&gt;mais complicado&lt;/em&gt;. Vou mostra como eu fiz:&lt;/p&gt;
+
+&lt;p&gt;Eu uso uma distro baseada no ubuntu; Esse procedimento irá funcionar em qualquer distro baseada no Ubuntu, assim como a minha.&lt;/p&gt;
+
+&lt;p&gt;A instalação que ensinarei aqui, será através do repositório do Node.js, presente no &lt;a href=&quot;https://github.com/nodejs/node&quot;&gt;Github&lt;/a&gt; ; Com o terminal aberto, você vai seguir os dois passos abaixo para instalar o Node através do repositório git:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Instale todas as dependências:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install g++ curl libssl-dev apache2-utils
+sudo apt-get install git-core
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Depois, rode os seguintes comandos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;git clone git:///github.com/nodejs/node.git
+cd node
+./configure
+make
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pronto tá instalado!&lt;br /&gt;
+Para conferir se realemente está instalado, você pode rodar dois comandos a baixo:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;node -v
+v4.2.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;O primeiro comando verifica a versão node.js instalada e retorna na segunda linha a versão que encontrou;&lt;/em&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;npm -v
+2.14.7
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;O segundo comando verifica o gerenciador de pacotes do node.js e também retorna na segunda linha a versão que encontrou;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;intalando-o-ruby&quot;&gt;Intalando o Ruby&lt;/h4&gt;
+
+&lt;p&gt;Já fui usuário &lt;s&gt;Ruindows&lt;/s&gt; Windows, no momento uso linux. A maior dificuldade que tive com o windows foi fazer com que tudo funcionasse certinho, o que nunca acontecia. Com o Node.js era relativamente fácil, mas com o ruby era quase impossível.&lt;/p&gt;
+
+&lt;p&gt;Se você é usuário windows, você pode baixar o instalador através do site &lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;rubyinstaller.org&lt;/a&gt;.&lt;br /&gt;
+Tem um site que encontrei na rede que explica tudinho: desde a instalação do ruby, o devkit e até mesmo a instalção do jekyll. O site é &lt;a href=&quot;http://jekyll-windows.juthilo.com/&quot;&gt;esse&lt;/a&gt; (em inglês).&lt;/p&gt;
+
+&lt;p&gt;Se você é usuário mac, é bem certo que já venha instalado, mas recomendo atualizar!&lt;/p&gt;
+
+&lt;p&gt;Agora, se você é usuário linux(distros baseadas em ubuntu) vou ensinar o método que usei.&lt;/p&gt;
+
+&lt;h4 id=&quot;instalando-o-rvm&quot;&gt;1. Instalando o RVM&lt;/h4&gt;
+&lt;p&gt;Primeiro, antes de tudo, precisamos instalar a chave pública do autor do RVM (Ruby Version Manager):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Antes de prosseguirmos, você precisa ter o &lt;strong&gt;cURL&lt;/strong&gt; instalado, caso não tenha basta rodar o comando: &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt-get install curl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vamos instalar o RVM para caso precisarmos ter outras versões do Ruby instalado na máquina conseguirmos usar facilmente, rode o comando abaixo:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;curl -L https://get.rvm.io | bash -s stable
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Se tudo ocorreu bem, agora você pode ter o RVM instalado, vamos adcionar ele ao shell, para isso adcione o comando abaixo no arquivo &lt;code class=&quot;highlighter-rouge&quot;&gt;.bashrc&lt;/code&gt; ou &lt;code class=&quot;highlighter-rouge&quot;&gt;.bash_profile&lt;/code&gt; na home do usuário.&lt;/p&gt;
+
+&lt;p&gt;Copie e cole o comando no terminal para incluir o RVM no shell:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s &quot;/usr/local/rvm/scripts/rvm&quot; ]] &amp;amp;&amp;amp; source &quot;/usr/local/rvm/scripts/rvm&quot;
+[[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] &amp;amp;&amp;amp; source &quot;$HOME/.rvm/scripts/rvm&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;O código acima serve para que toda vez que abrirmos o terminal podermos executar comandos do RVM apenas usando o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;“Node.js é um interpretador de código JavaScript que funciona do lado do servidor. Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de manipular dezenas de milhares de conexões simultâneas, numa única máquina física. O Node.js é baseado no interpretador V8. Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela empresa Joyent, onde Dahl trabalha.”&lt;/p&gt;
-
-  &lt;p&gt;—&lt;em&gt;Referência do site &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Node.js&quot; title=&quot;Página da wikipédia que fala sobre o Node.js&quot;&gt;Wikipédia&lt;/a&gt; visualizada em 20 de Novembro de 2015&lt;/em&gt;&lt;/p&gt;
+  &lt;p&gt;Caso algum comando com &lt;code class=&quot;highlighter-rouge&quot;&gt;rvm&lt;/code&gt; não funcione daqui para frente, você deve acessar as preferências (&lt;code class=&quot;highlighter-rouge&quot;&gt;Edit -&amp;gt; Profile Preferences&lt;/code&gt;) do terminal e marcar a opção para executar os comandos com login.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Para poder usar o Gulp, você vai precisar ter o nodeJs instalado em sua máquina.&lt;br /&gt;
-O download do Node.js pode ser feito por meio desse &lt;a href=&quot;https://nodejs.org/en/download/&quot; title=&quot; Página de download do Node.js&quot;&gt;link&lt;/a&gt; (em inglês).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-1/shell.jpg&quot; alt=&quot;editing Profile&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Após a instalação do node.js, instalaremos o Gulp. Vamos usar o terminal (no linux e mac) ou prompt de comandos (no windows). A instalação é feita praticamente da mesma maneira em ambos. Vamos usar a flag &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; para instalar globalmente o Gulp.&lt;/p&gt;
+&lt;h4 id=&quot;instalando-o-ruby&quot;&gt;2. Instalando o Ruby&lt;/h4&gt;
 
-&lt;p&gt;A instalação no windows via prompt fica assim:&lt;/p&gt;
+&lt;p&gt;Agora vamos instala o versão do ruby que desejamos. O jekyl é o que vai rodar sobre o ruby. Ele tem, como requerimento mínimo, possuir uma versão do ruby acima de 2.0.0. &lt;br /&gt;
+Vamos usar aqui no caso a versão 2.2.3. Para isso basta rodar os comandos a seguir:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-npm install gulp -g
+&lt;p&gt;Primeiro vamos instalar as dependências:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;rvm install requirements&lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;Segundo, iremos instalar propriamente o ruby:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;rvm install ruby-2.2.3
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;E no terminal é a mesma coisa, com a diferença apenas do &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt;, que invoca o &lt;a href=&quot;https://pt.m.wikipedia.org/wiki/Sudo&quot; title=&quot;Página da wikipédia sobre SUDO (SuperUser)&quot;&gt;&lt;strong&gt;super user&lt;/strong&gt;&lt;/a&gt; do sistema:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-sudo npm install gulp -g
-
+&lt;p&gt;Terceiro setamos para o sistema usar essa versão:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;rvm use ruby-2.2.3 --default
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;h2 id=&quot;explicando-os-comandos&quot;&gt;Explicando os comandos&lt;/h2&gt;
+&lt;p&gt;Agora verificamos se está instalado:&lt;/p&gt;
 
-&lt;h3 id=&quot;npm&quot;&gt;NPM&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;ruby -v
+# se a menssagem abaixo aparecer é poque foi instalado corretamente :)
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;gem -v
+# se a menssagem abaixo aparecer é poque foi instalado corretamente :)
+2.4.8
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/tecs-do-blog-parte-2/npm-logo.png&quot; alt=&quot;npm logo&quot; title=&quot; NPM logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Prontinho!&lt;br /&gt;
+Agora temos os node.js e ruby instalado. No Próximo post, falaremos sobre como instalar o gulp(e seus plugins) e jekyll.&lt;/p&gt;
 
-&lt;p&gt;NPM é o nome reduzido de Node Package Manager (Gerenciador de Pacotes do Node). A NPM é duas coisas: Primeiro, e mais importante, é um repositório online para publicação de projetos de código aberto para o Node.js; Segundo, ele é um utilitário de linha de comando que interage com este repositório online, que ajuda na instalação de pacotes, gerenciamento de versão e gerenciamento de dependências e nesse caso o Gulp. Se você quiser ver todos os pacotes que a npm tem clique nesse &lt;a href=&quot;https://www.npmjs.com/&quot; title=&quot;site da NPM&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;O comando &lt;code class=&quot;highlighter-rouge&quot;&gt;install&lt;/code&gt;, bom acho que não preciso nem dizer né. Enfim, ele é um comando do npm e tem a função de instalar um pacote, projeto ou biblioteca presente no repositório online da npm, nesse caso, procura e instala o Gulp.&lt;/p&gt;
-
-&lt;p&gt;A flag &lt;code class=&quot;highlighter-rouge&quot;&gt;-g&lt;/code&gt; faz com esse pacote seja instalado globalmente em sua máquina. O que isso significa? Significa que quando você precisar instalar o Gulp em um projeto, ele vai buscar na sua máquina primeiro e então instala no seu projeto. Veremos isso mais a frente em outro post.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 20 Nov 2015 00:00:00 -0200</pubDate>
-        <link>http://deglier.github.io/tecnologias-do-meu-blog-parte-2/</link>
-        <guid isPermaLink="true">http://deglier.github.io/tecnologias-do-meu-blog-parte-2/</guid>
-        
-        <category>making-of</category>
-        
-        <category>tecnologias</category>
-        
-        <category>linguagens</category>
-        
-        
-        <category>Making Of</category>
-        
-      </item>
-    
-      <item>
-        <title>Tecnologias presentes nesse blog - parte #1</title>
-        <description>
+&lt;p&gt;Até a próxima pessoal!&lt;/p&gt;
 </description>
         <pubDate>Wed, 18 Nov 2015 00:00:00 -0200</pubDate>
         <link>http://deglier.github.io/tecnologias-do-meu-blog-parte-1/</link>
