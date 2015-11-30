@@ -4,15 +4,25 @@ layout: default-normal
 
 {% include menu.html %}
 {% include header.html %}
-<section class="container-post">
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "image": [
+    "{{ "/assets/img/" | prepend: site.baseurl | prepend: site.url }}{{ page.imagem }}"
+  ]
+}
+</script>
+<section class="container-post" itemscope itemtype="http://schema.org/BlogPosting">
    <header class="header-post">
-       <h2 class="title">{{ page.title }}</h2>
-       <p class="lead">{{ page.introduction }}</p>
+<img src="{{ "/assets/img/" | prepend: site.url }}{{ page.imagem }}" style="display: none;" itemprop="image">
+       <h2 class="title" itemprop="headline">{{ page.title }}</h2>
+       <p class="lead" itemprop="description">{{ page.introduction }}</p>
        {% include time-post.html %}
    </header>
-    <article class="post">
+   <article class="post" itemprop="articleBody">
         {{ content }}
-</article>
+   </article>
 <footer class="footer-post">
     {% include share.html %}
 <h3>Artigos relacionados</h3>
