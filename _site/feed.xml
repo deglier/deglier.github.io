@@ -6,9 +6,24 @@
 </description>
     <link>http://deglier.github.io/</link>
     <atom:link href="http://deglier.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2015 00:44:12 -0200</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 00:44:12 -0200</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 01:57:32 -0200</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 01:57:32 -0200</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Onde o &#39;padding&#39; atua</title>
+        <description>
+</description>
+        <pubDate>Mon, 30 Nov 2015 00:00:00 -0200</pubDate>
+        <link>http://deglier.github.io/onde-o-padding-atua/</link>
+        <guid isPermaLink="true">http://deglier.github.io/onde-o-padding-atua/</guid>
+        
+        <category>css</category>
+        
+        <category>padding</category>
+        
+        
+      </item>
     
       <item>
         <title>Tecnologias presentes nesse blog - #1. Tudo o que usei aqui</title>
