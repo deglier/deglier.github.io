@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Tecnologias presentes nesse blog - parte #1'
+title: 'Tecnologias presentes nesse blog - #1. Tudo o que usei aqui'
 twitter_text: 'Nessa primeira parte veremos tudo o que usei no blog.'
 description: 'Nessa primeira parte veremos tudo o que usei no blog.'
 introduction: 'Falaremos sobre Gulp, Node.js e NPM.'
@@ -26,7 +26,7 @@ Se tem uma coisa que sou, são necessariamente duas: uma, sou bem curioso e proc
 
 -   **[Jekyll](https://jekyllrb.com/)** - como base do blog, sendo um gerador de páginas estáticas. No momento o meu preferido :)
 -   **[Gulp.js](http://gulpjs.com/)** - o primeiro automatizador que conheci, e até agora, o que eu mais amo.
--   **[SVG](https://pt.wikipedia.org/wiki/SVG)** - ícones escaláveis, fáceis de utilizar e super leves, ou seja, vetores no navegador &lt;3. Tem coisa melhor \*-\* ? 
+-   **[SVG](https://pt.wikipedia.org/wiki/SVG)** - ícones escaláveis, fáceis de utilizar e super leves, ou seja, vetores no navegador &lt;3. Tem coisa melhor \*-\* ?
 -   **[Sass](http://sass-lang.com/)** - Não tem como nao amar esse pre-processador. Simplesmente perfeito!
 - **[Github Pages](https://pages.github.com/)** - onde fica hospedado o blog e seu código-fonte.
 
@@ -89,7 +89,7 @@ Primeiro, antes de tudo, precisamos instalar a chave pública do autor do RVM (R
 
 Antes de prosseguirmos, você precisa ter o **cURL** instalado, caso não tenha basta rodar o comando: `sudo apt-get install curl`.
 
-Vamos instalar o RVM para caso precisarmos ter outras versões do Ruby instalado na máquina conseguirmos usar facilmente, rode o comando abaixo: 
+Vamos instalar o RVM para caso precisarmos ter outras versões do Ruby instalado na máquina conseguirmos usar facilmente, rode o comando abaixo:
 
 <pre><code class="bash">curl -L https://get.rvm.io | bash -s stable
 </code></pre>
@@ -112,7 +112,7 @@ O código acima serve para que toda vez que abrirmos o terminal podermos executa
 
 #### 2. Instalando o Ruby
 
-Agora vamos instala o versão do ruby que desejamos. O jekyl é o que vai rodar sobre o ruby. Ele tem, como requerimento mínimo, possuir uma versão do ruby acima de 2.0.0. 
+Agora vamos instala o versão do ruby que desejamos. O jekyl é o que vai rodar sobre o ruby. Ele tem, como requerimento mínimo, possuir uma versão do ruby acima de 2.0.0.
 Vamos usar aqui no caso a versão 2.2.3. Para isso basta rodar os comandos a seguir:
 
 Primeiro vamos instalar as dependências:
