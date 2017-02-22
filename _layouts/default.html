@@ -4,7 +4,7 @@ layout: compress
 <!DOCTYPE html>
 <html lang="pt-br">
 {% include head.html %}
-<body class='    {% if page.categoria == "html" %}html{% endif %}{% if page.categoria == "css" %}css{% endif %}{% if page.categoria == "js" %}js{% endif %}{% if page.categoria == null  %}base{% endif %}'>
+<body class='    {% if page.session == "html" %}html{% endif %}{% if page.session == "css" %}css{% endif %}{% if page.session == "js" %}js{% endif %}{% if page.session == null  %}base{% endif %}'>
 <div class="wrapper">
    <div class="canvas">
     {{ content }}
