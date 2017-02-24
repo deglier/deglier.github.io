@@ -3,7 +3,7 @@ layout: home
 ---
 
 {% for post in site.posts %}
-    <article role="article" class="{{ post.categoria }}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+    <article role="article" class="{{ post.session }}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
         <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
            <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
            <img src="{{ "/assets/img/" | prepend: site.baseurl | prepend: site.url }}{{ post.imagem }}" alt="{{ post.title }}" itemprop="image" style="width: 100%; padding-top: 10px;">
