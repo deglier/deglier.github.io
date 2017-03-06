@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
 keywords: "css, html, js, jekyll, blog, jquery, gulp, sass"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://deglier.github.io" # the base hostname & protocol for your site
-face_username: deglier.amorim
+face_username: degliersa
 twitter_username: degliersa
 github_username:  deglier
 analytics_id: UA-70396889-1
