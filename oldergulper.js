@@ -9,20 +9,23 @@ var imagemin        =   require('gulp-imagemin');
 var sass            =   require('gulp-sass');
 var cssmin          =   require('gulp-cssmin');
 var cp              =   require('child_process');
+var shell           =   require('gulp-shell');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Rodando:</span> $ jekyll build'
 };
 
 
-
-
+gulp.task('jekyll-build', shell.task([
+    'jekyll build'
+]));
+/*
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
-
+*/
 /**
  * Refaz o site e atualiza a página
  */
