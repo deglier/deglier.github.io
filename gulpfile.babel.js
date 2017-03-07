@@ -22,35 +22,35 @@ const sassPaths = {
   src: `${dirs.src}/scss/app.scss`,
   site: `${dirs.site}/assets/css/`,
   dest: `${dirs.dest}/css/`
-}
+};
 
 const jsPaths = {
   src: `${dirs.src}/js/**/*.js`,
   dest: `${dirs.dest}/js/`
-}
+};
 
 const imgPaths = {
   src: `${dirs.src}/img/**/*.{jpg,png,gif}`,
   dest: `${dirs.dest}/img/`
-}
+};
 
 const watch = {
   sass: `${dirs.src}/scss/**`,
   js: `${jsPaths.src}`,
   img: `${imgPaths.src}`,
   folders: ['./*', '_posts/*.md', '_layouts/*.html', '_includes/*.html']
-}
+};
 
 const defaultTasks = ['sass', 'js', 'imagemin', 'browser-sync', 'watch'];
 
-gulp.task('jekyll-build', shell(['jekyll build']));
+gulp.task('jekyll-build', shell.task(['jekyll build']));
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => { browserSync.reload() });
 
 gulp.task('sass', () => {
   return gulp.src(sassPaths.src)
     .pipe(sass({style: 'compress',includePaths: ['scss'],onError: browserSync.notify}))
-    .pipe(prefix(['last 15 versions','> 1%','ie8','ie7'],{cascade: true}))
+    .pipe(prefix(['last 15 versions','> 1%','ie 8','ie 7'],{cascade: true}))
     .pipe(cssmin())
     .pipe(gulp.dest(sassPaths.site))
     .pipe(browserSync.reload({stream:true}))
