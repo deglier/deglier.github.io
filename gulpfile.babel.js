@@ -6,6 +6,8 @@ import prefix from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
 import jade from 'gulp-jade';
 import plumber from 'gulp-plumber';
+import duojs from 'gulp-duo';
+import duoBabel from 'duo-babel';
 import uglify from 'gulp-uglify';
 import imagemin from 'gulp-imagemin';
 import sass from 'gulp-sass';
@@ -28,7 +30,7 @@ const paths = {
     dest: `${basePaths.dest}css/`
   },
   js: {
-    src: `${basePaths.src}js/app.js`,
+    src: `${basePaths.src}js/**/*.js`,
     dest: `${basePaths.dest}js/`
   },
   img: {
@@ -101,7 +103,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src(paths.js.src)
+  return gulp.src((env.p) ? paths.js.src : [paths.js.src, '!src/js/analytics.js'])
     .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(uglify())
