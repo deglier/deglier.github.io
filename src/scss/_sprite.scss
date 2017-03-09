@@ -1,0 +1,65 @@
+.icon {
+    font-size: 15px;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../img/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 35.46666666666667em 177.33333333333334em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../img/sprite.png");
+}
+
+
+
+  .icon.alg:before {
+      background-position: -0.6666666666666666em -0.6666666666666666em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.ansi-c:before {
+      background-position: -0.6666666666666666em -36.13333333333333em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.css:before {
+      background-position: -0.6666666666666666em -71.60000000000001em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.html:before {
+      background-position: -0.6666666666666666em -107.06666666666668em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.js:before {
+      background-position: -0.6666666666666666em -142.53333333333333em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+
