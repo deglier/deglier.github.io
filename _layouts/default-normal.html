@@ -4,7 +4,7 @@ layout: null
 <!DOCTYPE html>
 <html lang="pt-br">
 {% include head.html %}
-<body class='    {% if page.session == "html" %}html{% endif %}{% if page.session == "css" %}css{% endif %}{% if page.session == "js" %}js{% endif %}{% if page.session == null  %}base{% endif %}'>
+<body class='{% if page.session != null %}{{page.session}}{% else %}base{% endif %}'>
 <div class="wrapper">
    <div class="canvas">
     {{ content }}

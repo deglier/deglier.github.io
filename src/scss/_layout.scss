@@ -1,56 +1,12 @@
 .home {
-    .html {
-        a {
-            time:before {
-                background-image: url(../img/html.svg);
-            }
-            h2.title {
-                color: $destaque-html;
-            }
-        }
-    }
-    .css {
-        a {
-            time:before {
-                background-image: url(../img/css.svg);
-            }
-            h2.title {
-                color: $destaque-css;
-            }
-        }
-    }
-    .js {
-        a {
-            time:before {
-                background-image: url(../img/js.svg);
-
-            }
-            h2.title {
-                color: $destaque-js;
-            }
-        }
-    }
+    @include layoutColorList("alg", $destaque-alg);
+    @include layoutColorList("ansiC", $destaque-ansiC);
+    @include layoutColorList("Cpp", $destaque-Cpp);
+    @include layoutColorList("css", $destaque-css);
+    @include layoutColorList("js", $destaque-js);
+    @include layoutColorList("html", $destaque-html);
+    @include layoutColorList("sass", $destaque-sass);
 }
-
-.home {
-    .html,
-    .css,
-    .js {
-        a {
-            time:before {
-                content: "";
-                display: inline-block;
-                height: 15px;
-                width: 15px;
-                margin-right: 5px;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: contain;
-            }
-        }
-    }
-}
-
 
 /***
 home layout base
@@ -64,7 +20,7 @@ body.base {
         background-color: $bg-base;
     }
     .fixed-button {
-        background-color: lighten($bg-base, 10%);
+        background-color: darken($bg-base, 5%);
         &:hover {
             background-color: lighten($bg-base, 5%);
         }
@@ -74,169 +30,11 @@ body.base {
     }
 }
 
-/***
-artigo - layout html color
-*/
-body.html {
-    .header,
-    .menu,
-    .header-search--form,
-    .footer {
-        background-color: $destaque-html;
-    }
-    .fixed-button {
-        background-color: lighten($destaque-html, 10%);
-        svg {
-            fill: #000;
-        }
-        &:hover {
-            background-color: lighten($destaque-html, 5%);
-        }
-    }
-    h2.title {
-        color: $destaque-html;
-        &:before {
-            background-image: url(../img/html.svg);    
-        }
-    }
-    article.post {
-        a, p code {
-            color: $destaque-html;
-        }
-    }
-}
 
-
-/***
-artigo - layout css color
-*/
-body.css {
-    .header,
-    .menu,
-    .header-search--form,
-    .footer {
-        background-color: $destaque-css;
-    }
-    .fixed-button {
-        background-color: lighten($destaque-css, 10%);
-        &:hover {
-            background-color: lighten($destaque-css, 5%);
-        }
-    }
-    h2.title {
-        color: $destaque-css;
-        &:before {
-            background-image: url(../img/css.svg);    
-        }
-    }
-    article.post {
-        a, p code {
-            color: $destaque-css;
-        }
-    }
-}
-
-
-/***
-artigo - layout js color
-*/
-body.js {
-    .header,
-    .menu,
-    .header-search--form,
-    .footer {
-        background-color: $destaque-js;
-    }
-    .fixed-button {
-        background-color: lighten($destaque-js, 10%);
-        svg {
-            fill: #000;
-        }
-        &:hover {
-            background-color: lighten($destaque-js, 5%);
-        }
-    }
-    h2.title {
-        color: $destaque-js;
-        &:before {
-            background-image: url(../img/js.svg);    
-        }
-    }
-    article.post {
-        a, p code {
-            color: $destaque-js;
-        }
-    }
-}
-
-body.js h2.title,
-body.css h2.title,
-body.html h2.title {
-    &:before {
-        content: "";
-        display: block;
-        height: 40px;
-        width: 40px;
-        margin-right: 5px;
-        margin: 0 auto;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;    
-    }
-}
-
-
-/*defs  da svg */
-
-.icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
-}
-
-.icon-js {
-	width: 0.8818359375em;
-}
-#icon-js .path1 {
-	fill: #63a814;
-}
-#icon-js .path2 {
-	fill: #8acf17;
-}
-#icon-js .path3 {
-	fill: #fff;
-}
-#icon-js .path4 {
-	fill: #ebebeb;
-}
-
-#icon-html .path1 {
-	fill: #e34f26;
-}
-#icon-html .path2 {
-	fill: #ef652a;
-}
-#icon-html .path3 {
-	fill: #ebebeb;
-}
-#icon-html .path4 {
-	fill: #fff;
-}
-
-.icon-css {
-	width: 0.8818359375em;
-}
-#icon-css .path1 {
-	fill: #1572b6;
-}
-#icon-css .path2 {
-	fill: #33a9dc;
-}
-#icon-css .path3, #icon-css .path5 {
-	fill: #fff;
-}
-#icon-css .path4, #icon-css .path6, #icon-css .path7 {
-	fill: #ebebeb;
-}
-
+@include layoutColorArticle("alg", $destaque-alg);
+@include layoutColorArticle("ansiC", $destaque-ansiC);
+@include layoutColorArticle("Cpp", $destaque-Cpp);
+@include layoutColorArticle("css", $destaque-css);
+@include layoutColorArticle("js", $destaque-js);
+@include layoutColorArticle("html", $destaque-html);
+@include layoutColorArticle("sass", $destaque-sass);

@@ -6,6 +6,7 @@ description: 'Quando o boom da web expldiu dentro de mim.'
 introduction: 'Quando o boom da web expldiu dentro de mim e como surgiu o meu interesse por programação.'
 imagem: como-tudo-comecou/main.png
 categories: css
+session: js
 tags:
   - inicio
   - boom

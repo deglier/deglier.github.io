@@ -37,7 +37,7 @@ const paths = {
   },
   svg: {
     src: `${basePaths.src}svg/*.svg`,
-    dest: `${basePaths.src}/img/`,
+    dest: `${basePaths.src}img/`,
     sass: `scss/_sprite.scss`,
     png: `${basePaths.src}img/sprite.svg`
   }
@@ -48,7 +48,7 @@ const watch = {
   sass: `${basePaths.src}/scss/**/*.scss`,
   js: `${basePaths.src}`,
   img: `${paths.img.src}`,
-  folders: ['./*', '_posts/*.md', '_layouts/*.html', '_includes/*.html']
+  folders: ['./*','assets/css/*', '_posts/*.md', '_layouts/*.html', '_includes/*.html']
 };
 
 const defaultTasks = ['convert2png','sass', 'js', 'imagemin', 'browser-sync', 'watch'];
@@ -59,7 +59,7 @@ gulp.task('jekyll-build', shell.task(['jekyll build']));
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => { browserSync.reload() });
 
-gulp.task('sprite-svg', ()=> {
+gulp.task('svgSprites', () => {
   return gulp.src(paths.svg.src)
     .pipe(svgSprite({
       padding: '10',
@@ -69,12 +69,14 @@ gulp.task('sprite-svg', ()=> {
         sprite: 'img/sprite.svg'
       }
     }))
+    .pipe(gulp.dest(basePaths.src))
+    .pipe(filter("img/**/sprite.svg"))
+    .pipe(svg2png())
     .pipe(gulp.dest(basePaths.src));
 });
 
-gulp.task('convert2png', ['sprite-svg'], () => {
+gulp.task('convert2png', ['svgSprites'] , () =>{
   return gulp.src(paths.svg.png)
-    .pipe(filter("../img/**/sprite.svg"))
     .pipe(svg2png())
     .pipe(gulp.dest(paths.svg.dest));
 });
@@ -114,7 +116,7 @@ gulp.task('imagemin', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(watch.svg, ['sprite-svg']);
+  gulp.watch([paths.svg.png, watch.svg], ['convert2png']);
   gulp.watch(watch.sass, ['sass']);
   gulp.watch(watch.js, ['js']);
   gulp.watch(watch.img, ['imagemin']);

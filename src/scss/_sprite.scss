@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../img/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 35.46666666666667em 177.33333333333334em;
+    background-size: 35.46666666666667em 248.26666666666668em;
 }
 
 .no-svg .icon:before {
@@ -17,7 +17,7 @@
 
 
 
-  .icon.alg:before {
+  .icon.Cpp:before {
       background-position: -0.6666666666666666em -0.6666666666666666em;
       width: 34.13333333333333em;
       height: 34.13333333333333em;
@@ -26,7 +26,7 @@
 
 
 
-  .icon.ansi-c:before {
+  .icon.alg:before {
       background-position: -0.6666666666666666em -36.13333333333333em;
       width: 34.13333333333333em;
       height: 34.13333333333333em;
@@ -35,7 +35,7 @@
 
 
 
-  .icon.css:before {
+  .icon.ansiC:before {
       background-position: -0.6666666666666666em -71.60000000000001em;
       width: 34.13333333333333em;
       height: 34.13333333333333em;
@@ -44,7 +44,7 @@
 
 
 
-  .icon.html:before {
+  .icon.css:before {
       background-position: -0.6666666666666666em -107.06666666666668em;
       width: 34.13333333333333em;
       height: 34.13333333333333em;
@@ -53,8 +53,26 @@
 
 
 
-  .icon.js:before {
+  .icon.html:before {
       background-position: -0.6666666666666666em -142.53333333333333em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.js:before {
+      background-position: -0.6666666666666666em -178em;
+      width: 34.13333333333333em;
+      height: 34.13333333333333em;
+  }
+
+
+
+
+  .icon.sass:before {
+      background-position: -0.6666666666666666em -213.46666666666667em;
       width: 34.13333333333333em;
       height: 34.13333333333333em;
   }

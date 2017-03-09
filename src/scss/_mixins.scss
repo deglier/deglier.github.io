@@ -1,0 +1,35 @@
+@mixin layoutColorArticle($lang,$varColor){
+
+  body.#{$lang} {
+    .header,
+    .menu,
+    .header-search--form,
+    .footer {
+        background-color: $varColor;
+    }
+    .fixed-button {
+        background-color: darken($varColor, 5%);
+        &:hover {
+            background-color: lighten($varColor, 5%);
+        }
+    }
+    h2.title {
+        color: $varColor;
+    }
+    article.post {
+        a, p code {
+            color: $varColor;
+        }
+    }
+}
+}
+
+@mixin layoutColorList($lang, $varColor) {
+    .#{$lang} {
+        a {
+            h2.title {
+                color: $varColor;
+            }
+        }
+    }
+}

@@ -16,7 +16,9 @@ layout: default-normal
 <section class="container-post" itemscope itemtype="http://schema.org/BlogPosting">
    <header class="header-post">
 <img src="{{ "/assets/img/" | prepend: site.url }}{{ page.imagem }}" style="display: none;" itemprop="image">
-       <h2 class="title" itemprop="headline">{{ page.title }}</h2>
+       <h2 class="title" itemprop="headline">
+         {% if page.session != 'null' %}<span class="icon {{page.session}}"></span>{% endif %} <br>
+         {{ page.title }}</h2>
        <p class="lead" itemprop="description">{{ page.introduction }}</p>
        {% include time-post.html %}
    </header>
