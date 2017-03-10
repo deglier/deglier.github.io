@@ -6,9 +6,13 @@ layout: home
     <article role="article" class="{{ post.session }}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
         <a href="{{ post.url | prepend: site.baseurl }}" itemprop="url">
            <meta itemprop="datePublished" content="{{post.date | date_to_xmlschema }}">
-           <img src="{{ "/assets/img/" | prepend: site.baseurl | prepend: site.url }}{{ post.imagem }}" alt="{{ post.title }}" itemprop="image" style="width: 100%; padding-top: 10px;">
-            {% if post.session != 'null' %}<span class="icon {{post.session}}"></span>{% endif %}{% include time.html %}
-            <h2 class="title" itemprop="headline">{{ post.title }}</h2>
+           {% if post.imagem % == ''}
+           
+           {% else %}
+                <img src="{{ "/assets/img/" | prepend: site.baseurl | prepend: site.url }}{{ post.imagem }}" alt="{{ post.title }}" itemprop="image" style="width: 100%; padding-top: 10px; visibility: hidden; display: none">
+           {% endif %}
+           {% if post.session != 'null' %}<span class="icon {{post.session}}"></span>{% endif %}{% include time.html %}
+           <h2 class="title" itemprop="headline">{{ post.title }}</h2>
         </a>
         <p class="lead" itemprop="description">{{ post.description }}</p>
         <a class="veja" href="{{ post.url | prepend: site.baseurl }}">veja mais de {{ post.title }}</a>
