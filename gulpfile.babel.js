@@ -24,9 +24,6 @@ import filter from 'gulp-filter';
 import gulpCopy from 'gulp-copy';
 import sourcemaps from 'gulp-sourcemaps';
 
-
-
-
 const basePaths = {
   src: 'src/',
   serve: '_site/',
