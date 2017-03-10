@@ -89,7 +89,7 @@
   .gutter {
     border-right: 1px solid #ccc;
   }
-
+}
 pre,
 code {
     font-size: 15px;
@@ -97,6 +97,7 @@ code {
     border-radius: 3px;
     background-color: darken(#fdfdfd, 1%);
 }
+
 pre {
     > code {
         border: 0;
@@ -120,10 +121,8 @@ pre {
         background-color: darken(#fdfdfd, 5%);    
     }
 }
-
 .code {
     pre {
         padding: 0px 8px;
     }
 }
-
