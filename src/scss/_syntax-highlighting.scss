@@ -68,3 +68,62 @@
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
 }
+
+
+// having a lineno-container made it easier to style line number 
+// code blocks without impacting normal code blocks
+.lineno-container > figure > pre {
+  padding: 0px;
+}
+
+.highlight {
+  pre.lineno {
+    border: none;
+    @include opacity(0.6);  
+  }
+
+  .lineno {
+    @include unselectable();
+  }
+
+  .gutter {
+    border-right: 1px solid #ccc;
+  }
+
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: darken(#fdfdfd, 1%);
+}
+pre {
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.highlight > pre {
+    max-height: 600px;
+    overflow: auto;
+    > code {
+        padding: 0;
+    }
+}
+
+.gutter.gl {
+    background-color: darken(#fdfdfd, 5%);
+    pre {
+        padding: 0px 8px;
+        background-color: darken(#fdfdfd, 5%);    
+    }
+}
+
+.code {
+    pre {
+        padding: 0px 8px;
+    }
+}
+

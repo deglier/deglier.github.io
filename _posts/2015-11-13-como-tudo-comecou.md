@@ -12,6 +12,30 @@ tags:
   - boom
 ---
 
+
+
+{% highlight scss linenos %}
+
+pre,
+code {
+    font-size: 15px;
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: darken(#fdfdfd, 1%);
+}
+pre {
+    padding: 0px 8px;
+    overflow-x: auto;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+{% endhighlight %}
+
+
 ### olá
 
 Então, eu irei explicar <s>um pouco</s> como eu comecei a gostar de web e programação.

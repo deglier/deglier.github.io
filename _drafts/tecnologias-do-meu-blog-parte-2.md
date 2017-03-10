@@ -21,7 +21,7 @@ tags:
   - gulp-sass
   - gulp-imagemin
   - jekyll
-  - package.json
+  - package-json
 ---
 
 
