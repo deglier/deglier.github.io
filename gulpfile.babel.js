@@ -1,5 +1,7 @@
 'use strict';
 
+var env         = require('minimist')(process.argv.slice(2))
+
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import prefix from 'gulp-autoprefixer';
@@ -16,6 +18,7 @@ import shell from 'gulp-shell';
 import svgSprite from 'gulp-svg-sprites';
 import svg2png from 'gulp-svg2png';
 import filter from 'gulp-filter';
+import gulpCopy from 'gulp-copy';
 
 const basePaths = {
   src: 'src/',
@@ -60,6 +63,13 @@ const buildTasks = ['convert2png','sass', 'js', 'imagemin', 'jekyll-build'];
 gulp.task('jekyll-build', shell.task(['jekyll build']));
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => { browserSync.reload() });
+
+
+gulp.task('copyingFiles', () => {
+  return gulp.src(`${basePaths.src}fonts/*`)
+    .pipe(gulpCopy(`fonts/`))
+    .dest(basePaths.dest);
+});
 
 gulp.task('svgSprites', () => {
   return gulp.src(paths.svg.src)
