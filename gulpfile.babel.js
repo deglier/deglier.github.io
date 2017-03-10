@@ -49,8 +49,7 @@ gulp.task('jekyll-build', shell.task(['jekyll build']));
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => { browserSync.reload() });
 
 gulp.task('copyFonts', () => {
-  return gulp.src(`${basePaths.src}fonts/*`)
-    .pipe(gulpCopy('./'))
+  return gulp.src(`${basePaths.src}fonts/**/*.{svg,ttf,eot,woff,css}`)
     .pipe(gulp.dest(`${basePaths.dest}fonts/`));
 });
 
