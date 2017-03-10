@@ -301,19 +301,18 @@ a.header-menu--icon{
 }
 .home,
 .container-post {
-    @extend %width-100;
     min-width: 300px;
     margin: 0 auto;
-    padding: 20px 0 50px 0;
+    padding: 20px 20px 50px 20px;
     .header-post,
     .post,
     .footer-post {
         padding: 0 10px 5px 10px;
     }
     article {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 15px;
         margin-bottom: 20px;
+        
     }
     time {
         @extend %font-light;
@@ -323,11 +322,17 @@ a.header-menu--icon{
     }
 }
 .home {
-    max-width: 960px;
+    max-width: 1200px;
     article {
         @extend %position-relative;
-        max-width: 450px;
-        border-bottom: 2px solid rgba(175, 170, 170, 0.4);
+        max-width: 650px;
+        border: 2px solid rgba(175, 170, 170, 0.1);
+        border-radius: 4px;
+        transition: border-color ease-in-out 300ms;
+        &:hover {
+            border-color: rgba(lighten($bg-base, 20%), 0.3);
+            transition: border-color ease-in-out 300ms;
+        }
         a {
             .icon {
                 font-size: .65px;
@@ -356,16 +361,17 @@ a.header-menu--icon{
         .tags {
             padding-bottom: 10px;
             a {
-                color: $bg-base;
-                padding: 3px 3px;
+                display: inline-block;
+                margin: 3px;
+                color: rgba($bg-base, 0.5);
+                padding: 3px 3px 6px 3px;
                 border-radius: 4px;
-                text-decoration: underline;
-                &:before {
-                    content: "#";
-                    @extend %font-bold;
-                }
+                border: 1px solid rgba($bg-base, 0.25);
+                transition: all ease-in-out 300ms;
                 &:hover {
                     color: lighten($bg-base, 20%);
+                    border-color: lighten($bg-base, 20%);
+                    transition: all ease-in-out 300ms; 
                 }
             }
         }
@@ -589,19 +595,19 @@ a.right {
     }
 }
 @media screen and (max-width: 768px) {
-/*    a.only-desktop {
-        display: none;
-    } */
+
 }
 
-@media screen and (min-width: 450px) and (max-width: 960px) {
+@media screen and (min-width: 651px) and (max-width: 960px) {
     .home {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         article {
             width: 100%;
-            max-width: 45%;
+            max-width: calc(50% - 55px);
+            margin-right: 10px;
+            margin-left: 10px;
             display: inline-block;
             background: rgba(245, 245, 245, 0.2);
             &:first-of-type {
@@ -618,6 +624,10 @@ a.right {
         }
     }
 }
+
+
+
+
 @media screen and (min-width: 961px) {
     .posts-relateds {
         li {
@@ -633,9 +643,10 @@ a.right {
         flex-wrap: wrap;
         justify-content: flex-start;
         article {
-            max-width: 30%;
-            margin-right: 0.6%;
-            margin-left: 0.6%;
+            width: 100%;
+            max-width: calc(33.4% - 55px);
+            margin-right: 10px;
+            margin-left: 10px;
             display: inline-block;
             background: rgba(245, 245, 245, 0.2);
             time {
@@ -650,7 +661,7 @@ a.right {
            &:first-of-type {
                 display: block;
                 width: 100%;
-                max-width: 960px;
+                max-width: 1200px;
                .title {
                    font-size: 60px;
                }
