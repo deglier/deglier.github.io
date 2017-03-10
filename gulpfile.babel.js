@@ -1,10 +1,7 @@
 'use strict';
 
+var env         = require('minimist')(process.argv.slice(2))
 
-
-//importa os plugins para as tarefas
-
-var env = require('minimist')(process.argv.slice(2))
 import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import prefix from 'gulp-autoprefixer';
@@ -22,10 +19,6 @@ import svgSprite from 'gulp-svg-sprites';
 import svg2png from 'gulp-svg2png';
 import filter from 'gulp-filter';
 import gulpCopy from 'gulp-copy';
-import sourcemaps from 'gulp-sourcemaps';
-
-
-
 
 const basePaths = {
   src: 'src/',
@@ -33,37 +26,60 @@ const basePaths = {
   dest: 'assets/'
 };
 
+const paths = {
+  sass: {
+    src: `${basePaths.src}scss/app.scss`,
+    site: `${basePaths.site}${basePaths.dest}css/`,
+    dest: `${basePaths.dest}css/`
+  },
+  js: {
+    src: `${basePaths.src}js/**/*.js`,
+    dest: `${basePaths.dest}js/`
+  },
+  img: {
+    src: `${basePaths.src}img/**/*.{jpg,png,gif,bitmap,svg}`,
+    dest: `${basePaths.dest}img/`
+  },
+  svg: {
+    src: `${basePaths.src}svg/*.svg`,
+    dest: `${basePaths.src}img/`,
+    sass: `scss/_sprite.scss`,
+    png: `${basePaths.src}img/sprite.svg`
+  }
+}
+
 const watch = {
-  fonts: `${basePaths}fonts/*`,
-  svg: `${basePaths.src}svg/*svg`,
+  svg: `${paths.svg.src}`,
   sass: `${basePaths.src}/scss/**/*.scss`,
-  js: `${basePaths.src}js/`,
-  img: `${basePaths.src}img/**/*.{jpg,png,gif,svg}`,
+  js: `${basePaths.src}`,
+  img: `${paths.img.src}`,
   folders: ['./*','assets/css/*', '_posts/*.md', '_layouts/*.html', '_includes/*.html']
 };
 
-const defaultTasks = ['convert2png', 'copyFonts', 'sass', 'js', 'imagemin', 'browser-sync', 'watch'];
-const buildTasks = ['convert2png', 'copyFonts', 'sass', 'js', 'imagemin', 'jekyll-build'];
+const defaultTasks = ['convert2png','sass', 'js', 'imagemin', 'browser-sync', 'watch'];
 
+const buildTasks = ['convert2png','sass', 'js', 'imagemin', 'jekyll-build'];
 
-//inicio das tasks
 gulp.task('jekyll-build', shell.task(['jekyll build']));
 
 gulp.task('jekyll-rebuild', ['jekyll-build'], () => { browserSync.reload() });
 
-gulp.task('copyFonts', () => {
+
+gulp.task('copyingFiles', () => {
   return gulp.src(`${basePaths.src}fonts/*`)
-    .pipe(gulpCopy('./'))
-    .pipe(gulp.dest(`${basePaths.dest}fonts/`));
+    .pipe(gulpCopy(`fonts/`))
+    .dest(basePaths.dest);
 });
 
 gulp.task('svgSprites', () => {
-  return gulp.src(`${basePaths.src}svg/*.svg`)
+  return gulp.src(paths.svg.src)
     .pipe(svgSprite({
       padding: '10',
       baseSize: 15,
-      cssFile: `scss/_sprite.scss`,
-      svg: { sprite: 'img/sprite.svg'}
+      cssFile: paths.svg.sass,
+      svg: {
+        sprite: 'img/sprite.svg'
+      }
     }))
     .pipe(gulp.dest(basePaths.src))
     .pipe(filter("img/**/sprite.svg"))
@@ -72,21 +88,19 @@ gulp.task('svgSprites', () => {
 });
 
 gulp.task('convert2png', ['svgSprites'] , () =>{
-  return gulp.src(`${basePaths.src}img/sprite.svg`)
+  return gulp.src(paths.svg.png)
     .pipe(svg2png())
-    .pipe(gulp.dest(`${basePaths.src}img/`));
+    .pipe(gulp.dest(paths.svg.dest));
 });
 
 gulp.task('sass', () => {
-  return gulp.src(`${basePaths.src}scss/app.scss`)
-    .pipe(sourcemaps.init())
+  return gulp.src(paths.sass.src)
     .pipe(sass({style: 'compress',includePaths: ['scss'],onError: browserSync.notify}))
     .pipe(prefix(['last 15 versions','> 1%','ie 8','ie 7'],{cascade: true}))
     .pipe(cssmin())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(`${basePaths.dest}css/`))
-    .pipe(gulp.dest(`${basePaths.serve}assets/css/`))
-    .pipe(browserSync.reload({stream:true}));
+    .pipe(gulp.dest(paths.sass.site))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest(paths.sass.dest));
 
 });
 
@@ -99,25 +113,22 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 });
 
 gulp.task('js', () => {
-  return gulp.src((env.p) ? `${basePaths.src}js/**/*.js` : [`${basePaths.src}js/**/*.js`, '!src/js/analytics.js'])
-    .pipe(sourcemaps.init())
+  return gulp.src((env.p) ? paths.js.src : [paths.js.src, '!src/js/analytics.js'])
     .pipe(plumber())
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(`${basePaths.dest}js/`));
+    .pipe(gulp.dest(paths.js.dest));
 });
 
 gulp.task('imagemin', () => {
-  return gulp.src(`${basePaths.src}img/**/*.{jpg,png,svg,gif}`)
+  return gulp.src(paths.img.src)
     .pipe(plumber())
     .pipe(imagemin({ optimizationLevel: 5, progessive: true, interlaced: true }))
-    .pipe(gulp.dest(`${basePaths.dest}img/`));
+    .pipe(gulp.dest(paths.img.dest));
 });
 
 gulp.task('watch', () => {
-  gulp.watch(watch.fonts, ['copyFonts'])
-  gulp.watch(watch.svg, ['convert2png']);
+  gulp.watch([paths.svg.png, watch.svg], ['convert2png']);
   gulp.watch(watch.sass, ['sass']);
   gulp.watch(watch.js, ['js']);
   gulp.watch(watch.img, ['imagemin']);
