@@ -2,7 +2,7 @@
   "name": "degliersa",
   "version": "1.0.0",
   "description": "um blog para da luz as pessoas sobre front end",
-  "main": "gulpfile.js",
+  "main": "gulpfile.babel.js",
   "dependencies": {
     "bulma": "^0.3.2",
     "gulp": "^3.9.0"
