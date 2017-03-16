@@ -43,6 +43,6 @@ No final da década de 1970, o Unix saiu do ~~armário~~ laboratório para ser l
 # 2. Considerações Finais
 
 ## 2.1. Se ela é tão antiga, porque é importante aprender C ?
-É simples! ~~Todas~~ Quase todas as linguagens herdam um pouco, *ou tudo*, da linguagem C. Aprendendo a linguagemC, o aprendizado em outra ou em qualquer linguagem será fácil e rápido. 
+É simples! ~~Todas~~ Quase todas as linguagens herdam um pouco, *ou tudo*, da linguagem C. Aprendendo a linguagem C, o aprendizado em outra ou em qualquer linguagem será fácil e rápido. 
 
-Então é isso pessoal, no próximo post iremos abordas a sintaxe da linguagem. Até a próxima o/(o.
+Então é isso pessoal, no próximo post iremos abordar a sintaxe da linguagem. Até a próxima o/(o.
