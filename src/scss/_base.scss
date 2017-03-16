@@ -309,10 +309,10 @@ a.header-menu--icon{
         max-width: 650px;
         border: 2px solid rgba(175, 170, 170, 0.1);
         border-radius: 4px;
-        transition: border-color ease-in-out 300ms;
+        @extend %transition-ease-in-out-300ms;
         &:hover {
             border-color: rgba(lighten($bg-base, 20%), 0.3);
-            transition: border-color ease-in-out 300ms;
+            @extend %transition-ease-in-out-300ms;
         }
         a {
             .icon {
@@ -348,11 +348,11 @@ a.header-menu--icon{
                 padding: 3px 3px 6px 3px;
                 border-radius: 4px;
                 border: 1px solid rgba($bg-base, 0.25);
-                transition: all ease-in-out 300ms;
+                @extend %transition-ease-in-out-300ms;
                 &:hover {
                     color: lighten($bg-base, 20%);
                     border-color: lighten($bg-base, 20%);
-                    transition: all ease-in-out 300ms; 
+                    @extend %transition-ease-in-out-300ms; 
                 }
             }
         }
@@ -362,6 +362,26 @@ a.header-menu--icon{
 .container-post {
     @extend %font-bold;
     max-width: 750px;
+    .tags {
+            padding-bottom: 10px;
+            padding-top: 20px;
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                display: inline-block;
+                margin: 3px;
+                color: rgba($bg-base, 0.5);
+                padding: 3px 3px 6px 3px;
+                border-radius: 4px;
+                border: 1px solid rgba($bg-base, 0.25);
+                @extend %transition-ease-in-out-300ms;
+                &:hover {
+                    color: lighten($bg-base, 20%);
+                    border-color: lighten($bg-base, 20%);
+                    @extend %transition-ease-in-out-300ms; 
+                }
+            }
+        }
     .header-post {
         @extend %text-align-center;
         .title {
@@ -550,30 +570,24 @@ a.right {
 
 .posts-relateds {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
     padding: 0;
     li {
         list-style: none;
-        max-width: 100%;
-        a {
-            img {
-                max-width: 100%;
-                @extend %transition-ease-in-out-300ms;
-            }
-            &:hover {
-                img {
-                    filter: brightness(2);
-                    @extend %transition-ease-in-out-300ms;
-                }
-            }
-        }
-        &:last-of-type {
-            display: none;
-        }
+        width: 100%;
+        text-align: center;
+        @include layoutColor("base-", $bg-base);
+        @include layoutColor("base-alg", $destaque-alg);
+        @include layoutColor("base-ansiC", $destaque-ansiC);
+        @include layoutColor("base-Cpp", $destaque-Cpp);
+        @include layoutColor("base-css", $destaque-css);
+        @include layoutColor("base-js", $destaque-js);
+        @include layoutColor("base-html", $destaque-html);
+        @include layoutColor("sass", $destaque-sass);
     }
 }
+
 @media screen and (max-width: 768px) {
 
 }
@@ -598,26 +612,21 @@ a.right {
         }
 
     }
-    .posts-relateds {
-        li {
-            max-width: 45%;
-        }
-    }
 }
 
 
 
 
 @media screen and (min-width: 961px) {
+    
     .posts-relateds {
+        flex-direction: row;
         li {
-            width: 100%;
-            max-width: 32%;
-            &:last-of-type {
-                display: block;
-            }
+            padding: 15px;
+            width: calc(100% - 90px);
         }
     }
+
     .home {
         display: flex;
         flex-wrap: wrap;

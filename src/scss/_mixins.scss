@@ -34,6 +34,28 @@
     }
 }
 
+@mixin layoutColor($lang, $varColor) {
+    &.#{$lang} {
+        @extend %transition-ease-in-out-300ms;
+        span {
+            font-size: .70px;
+            vertical-align: middle;
+        }
+        a {
+            display: block;
+            font-size: 30px;
+            color: rgba($varColor, .85);
+            @extend %transition-ease-in-out-300ms;
+        }
+        &:hover {
+                a {
+                    color: rgba($varColor, 1);
+                    @extend %transition-ease-in-out-300ms;
+                }
+            }
+    }
+}
+
 
 // so that the line numbers are not selectable
 @mixin unselectable() {
