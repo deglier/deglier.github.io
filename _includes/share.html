@@ -8,7 +8,7 @@
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Compartilhe no Facebook">
         <span class="icon-facebook"></span>
     </a>
-    <a class="only-mobile" href="whatsapp://send?text=leia: '{{ page.title }}' de {{ site.url }}{{ page.url }}" data-action="share/whatsapp/share">
+    <a class="only-mobile" href="whatsapp://send?text=leia: '{% if page.categories == null %}{% else %}{{ page.categories }}: {% endif %}{{ page.title }}' de {{ site.url }}{{ page.url }}" data-action="share/whatsapp/share">
         <span class="icon-whatsapp"></span>
     </a>
     <a class="only-desktop" aria-label="Compartilhe no Google Plus" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}"
