@@ -8,6 +8,7 @@ imagem: tecs-do-blog-parte-1/main.png
 serie: 'Tecnologias presentes nesse blog'
 categories:
 - 'Making Of'
+session: js
 tags:
   - making-of
   - tecnologias
