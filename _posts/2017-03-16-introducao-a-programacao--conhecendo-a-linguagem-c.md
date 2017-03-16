@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2017-03-16 13:47:38
-image: 'assets/img/introducao-a-programacao/conhecendo-a-linguagem-c.jpg'
+image: '/introducao-a-programacao/conhecendo-a-linguagem-c.jpg'
 title: "Conhecendo a linguagem C"
 description: "Dando início a séries de postagens em introdução a programação"
 introduction: "A linguagem, sua origem e o padrão ANSI C"
