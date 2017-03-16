@@ -13,7 +13,20 @@ layout: default-normal
   ]
 }
 </script>
+
+
+
 <section class="container-post" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- topo do site -->
+<ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-6974905735367830"
+      data-ad-slot="1572084900"
+      data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
    <header class="header-post">
 <!--<img src="{{ "/assets/img/" | prepend: site.url }}{{ page.imagem }}" style="display: none;" itemprop="image">!-->
        <h2 class="title" itemprop="headline">
@@ -21,34 +34,38 @@ layout: default-normal
          {{ page.title }}</h2>
        <p class="lead" itemprop="description">{{ page.introduction }}</p>
        {% include time-post.html %}
+       <div class="tags">
+         {% for tag in page.tags %}
+             <a href="/tags/#{{tag}}">{{ tag }}</a>
+         {% endfor %}
+       </div>
    </header>
    <article class="post" itemprop="articleBody">
-     <small class="is-bordered">adversiment
-      <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- adsense01 -->
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-6974905735367830"
-         data-ad-slot="1572084900"
-         data-ad-format="auto"></ins>
-    <script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-     </small>
-    
+
         {{ content }}
+  
    </article>
 <footer class="footer-post">
     {% include share.html %}
-<h3>Artigos relacionados</h3>
+  <h3>Artigos relacionados</h3>
 <ul class="posts-relateds">
   {% for post in site.related_posts limit:3 %}
-    <li>
-      <a href="{{ post.url }}"><img src="{{ "/assets/img/" | prepend: site.baseurl }}{{ post.imagem }}" alt=""></a>
+    <li class="base{% if post.session != 'null' and post.session != '' %}-{{post.session}}{% endif %}">
+      <a href="{{ post.url }}">{{post.title}} <br><small>{% include time.html %}</small></a>
     </li>
   {% endfor %}
 </ul>
 <hr>
+<!-- rodapé do site -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6974905735367830"
+     data-ad-slot="8748819304"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
     {% include comments.html %}
 </footer>
 
