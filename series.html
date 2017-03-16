@@ -1,23 +1,23 @@
 ---
 layout: tags
-title: "Série"
+title: "Séries"
 permalink: /series/
 description: "Encontre todas a séries do blog abaixo"
 ---
 
-<div class="tags">
 {% for tag in site.categories %}
-  <h3 class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</h3>
-  <nav class="indice">
+  <h2 class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</h2>
+  <ul class="post-list">
     {% assign pages_list = tag[1] %}
     {% for post in pages_list reversed %}
       {% if post.title != null %}
       {% if group == null or group == post.group %}
-      <h4><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
+      <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<small class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{% include time.html %}</time></small></a></li>
       {% endif %}
       {% endif %}
     {% endfor %}
     {% assign pages_list = nil %}
     {% assign group = nil %}
-  </nav>
+  </ul>
+  <br><br>
 {% endfor %}

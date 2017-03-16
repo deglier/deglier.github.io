@@ -593,6 +593,25 @@ a.right {
     }
 }
 
+
+.post-list {
+    padding: 0;
+    li {
+        float: none;
+        clear: both;
+        list-style: none;
+        border-bottom: 1px solid $bg-base;
+        a {
+            display: block;
+            font-size: 110%;
+            .entry-date {
+                display: none;
+                float: right;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
 
 }
@@ -686,6 +705,15 @@ a.right {
 
     a.only-mobile {
         display: none;
+    }
+    .post-list {
+        li {
+            a {
+                .entry-date {
+                    display: inline-block;
+                }
+            }
+        }   
     }
 
 }
