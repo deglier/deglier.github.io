@@ -9,10 +9,8 @@ import gulp from 'gulp';
 import browserSync from 'browser-sync';
 import prefix from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
-import jade from 'gulp-jade';
 import plumber from 'gulp-plumber';
-import duojs from 'gulp-duo';
-import duoBabel from 'duo-babel';
+import duojs from 'gulp-duojs';
 import uglify from 'gulp-uglify';
 import imagemin from 'gulp-imagemin';
 import sass from 'gulp-sass';
@@ -34,7 +32,7 @@ const watch = {
   fonts: `${basePaths}fonts/*`,
   svg: `${basePaths.src}svg/*svg`,
   sass: `${basePaths.src}/scss/**/*.scss`,
-  js: `${basePaths.src}js/`,
+  js: `${basePaths.src}js/**/*.js`,
   img: `${basePaths.src}img/**/*.{jpg,png,gif,svg}`,
   folders: ['./*','assets/css/*', '_posts/*.md', '_layouts/*.html', '_includes/*.html']
 };
@@ -95,10 +93,12 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 });
 
 gulp.task('js', () => {
+  //return gulp.src(`${basePaths.src}js/app.js`)
   return gulp.src((env.p) ? `${basePaths.src}js/**/*.js` : [`${basePaths.src}js/**/*.js`, '!src/js/analytics.js'])
-    .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(concat('main.js'))
+    .pipe(sourcemaps.init())
+    //.pipe(duojs())
+    .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(`${basePaths.dest}js/`));

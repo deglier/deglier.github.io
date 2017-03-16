@@ -25,7 +25,7 @@ tags:
 ---
 
 
-Vamo a segunda parte?
+Vamos a segunda parte?
 
 ### Gulp
 ![Gulp logo](/assets/img/tecs-do-blog-parte-2/gulp-logo.png "Gulp logo")
