@@ -590,6 +590,9 @@ a.right {
         @include layoutColor("base-js", $destaque-js);
         @include layoutColor("base-html", $destaque-html);
         @include layoutColor("sass", $destaque-sass);
+        img {
+            max-width: 100%;
+        }
     }
 }
 
