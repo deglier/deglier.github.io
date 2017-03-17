@@ -94,7 +94,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], () => {
 
 gulp.task('js', () => {
   //return gulp.src(`${basePaths.src}js/app.js`)
-  return gulp.src((env.p) ? `${basePaths.src}js/**/*.js` : [`${basePaths.src}js/**/*.js`, '!src/js/analytics.js'])
+  return gulp.src((env.p) ? `${basePaths.src}js/**/*.js` : [`${basePaths.src}js/**/*.js`, '!src/js/analytics.js', '!src/js/scrollTop.js'])
     .pipe(plumber())
     .pipe(sourcemaps.init())
     //.pipe(duojs())
