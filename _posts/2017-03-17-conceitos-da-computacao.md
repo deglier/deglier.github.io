@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2017-03-17 16:24:49
-image: 'assets/img/'
+image: '/arquitetura-de-computadores/conceitos-de-computacao-1.jpg'
 title: "Conceitos da Computação #1"
 description: "O que é um computador e o que são linguagens de programação"
 introduction: "O que é um computador e o que são linguagens de programação"
