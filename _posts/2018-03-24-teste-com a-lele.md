@@ -19,4 +19,4 @@ tags:
 - Lista
 - Lista
 
-*Negrito* _italico_
+*italico* e assim é **negrito** _asim_ ou __Assim__.
