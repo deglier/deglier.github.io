@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Proteínas</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    .slider-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .slider-container input[type="range"] {
+      flex-grow: 1;
+      margin: 0 10px;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #ecf0f1;
+      border-radius: 5px;
+      height: 5px;
+    }
+    .slider-container input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 15px;
+      height: 15px;
+      background: #3498db;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .proteins {
+      margin: 15px 0;
+    }
+    .proteins label {
+      display: flex;
+      align-items: center;
+      font-size: 1.1em;
+    }
+    .proteins input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .results {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #3498db;
+      border-radius: 5px;
+      background-color: #ecf0f1;
+    }
+    .results h3 {
+      margin: 0 0 10px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="container">
+    <h1>Cálculo de Proteínas</h1>
+
+    <!-- Slider para número de pessoas -->
+    <div class="slider-container">
+      <label for="people">Número de Pessoas</label>
+      <input type="range" v-model="numPessoas" min="1" max="10" />
+      <span>{{ numPessoas }}</span>
+    </div>
+
+    <!-- Slider para número de dias -->
+    <div class="slider-container">
+      <label for="days">Dias de Consumo</label>
+      <input type="range" v-model="dias" min="1" max="30" />
+      <span>{{ dias }}</span>
+    </div>
+
+    <!-- Seleção de proteínas -->
+    <h2>Selecione as proteínas consumidas para períodos de 7 dias:</h2>
+    <div class="proteins">
+      <label>
+        <input type="checkbox" v-model="consomeFrango" />
+        Frango
+      </label>
+    </div>
+
+    <div class="proteins">
+      <label>
+        <input type="checkbox" v-model="consomePeixe" @change="atualizarDiasPeixe" />
+        Peixe
+      </label>
+    </div>
+
+    <div class="proteins">
+      <label>
+        <input type="checkbox" v-model="consomeSuino" @change="atualizarDiasSuino" />
+        Carne Suína
+      </label>
+    </div>
+
+    <div class="proteins">
+      <label>
+        <input type="checkbox" v-model="consomeVermelha" @change="atualizarDiasVermelha" />
+        Carne Vermelha
+      </label>
+    </div>
+
+    <!-- Resultados -->
+    <div class="results">
+      <h3>Resultados para {{ dias }} dias e {{ numPessoas }} pessoa(s):</h3>
+      <p><strong>Frango:</strong> {{ formatarResultado(totalFrango) }}</p>
+      <p><strong>Peixe:</strong> {{ formatarResultado(totalPeixe) }}</p>
+      <p><strong>Carne Suína:</strong> {{ formatarResultado(totalSuino) }}</p>
+      <p><strong>Carne Vermelha:</strong> {{ formatarResultado(totalVermelha) }}</p>
+    </div>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        numPessoas: 1,
+        dias: 7,
+        consomeFrango: true,
+        consomePeixe: false,
+        consomeSuino: false,
+        consomeVermelha: false,
+        diasFrango: 4,
+        diasPeixe: 1,
+        diasSuino: 1,
+        diasVermelha: 1
+      },
+      computed: {
+        totalFrango() {
+          const porcaoFrango = 187.5;
+          let totalDiasFrango = this.diasFrango + 
+                                (this.consomePeixe ? 0 : this.diasPeixe) + 
+                                (this.consomeSuino ? 0 : this.diasSuino) + 
+                                (this.consomeVermelha ? 0 : this.diasVermelha);
+          return this.numPessoas * porcaoFrango * 2 * totalDiasFrango; // g
+        },
+        totalPeixe() {
+          const porcaoPeixe = 187.5;
+          return this.consomePeixe ? (this.numPessoas * porcaoPeixe * 2 * this.diasPeixe) : 0; // g
+        },
+        totalSuino() {
+          const porcaoSuino = 187.5;
+          return this.consomeSuino ? (this.numPessoas * porcaoSuino * 2 * this.diasSuino) : 0; // g
+        },
+        totalVermelha() {
+          const porcaoVermelha = 187.5;
+          return this.consomeVermelha ? (this.numPessoas * porcaoVermelha * 2 * this.diasVermelha) : 0; // g
+        }
+      },
+      methods: {
+        formatarResultado(total) {
+          if (total >= 1000) {
+            return `${(total / 1000).toFixed(2)} kg`;
+          } else {
+            return `${total.toFixed(0)} g`;
+          }
+        },
+        atualizarDiasPeixe() {
+          if (!this.consomePeixe) {
+            this.diasFrango += this.diasPeixe; // Adiciona os dias de peixe ao frango
+            this.diasPeixe = 0; // Reseta dias de peixe
+          }
+        },
+        atualizarDiasSuino() {
+          if (!this.consomeSuino) {
+            this.diasFrango += this.diasSuino; // Adiciona os dias de suína ao frango
+            this.diasSuino = 0; // Reseta dias de suína
+          }
+        },
+        atualizarDiasVermelha() {
+          if (!this.consomeVermelha) {
+            this.diasFrango += this.diasVermelha; // Adiciona os dias de vermelha ao frango
+            this.diasVermelha = 0; // Reseta dias de vermelha
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
